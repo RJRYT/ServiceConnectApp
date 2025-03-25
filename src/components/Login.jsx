@@ -19,7 +19,7 @@ function Login(){
                                             <h3 className="text-slate-800 text-2xl mt-10  font-semibold ">Let's Sign In.!</h3>
                                             <p className="text-sm">Login to Your Account to Continue your Courses</p>
                                             <img className="w-5 absolute mt-36 ml-4" src={email}/>
-                                            <img className="w-4 absolute ml-81 mt-36" src={stroke}/>
+                                        
                                             <input className="text-white w-90 bg-stone-500 rounded-lg px-11 py-2" type="text" placeholder="Email" />
                                             <img className=" w-4 absolute mt-53 ml-5" src={password}/>
                                             <img className="w-4 absolute mt-54 ml-81" src={stroke}/>
