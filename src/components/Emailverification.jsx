@@ -45,53 +45,53 @@ function EmailVerification() {
     };
 
     return (
-        <div className="flex items-center flex-col justify-center  h-screen bg-[rgb(217, 217, 219)]">
-            <div className="w-full h-30 flex bg-black items-center space-x-3">
+        <div className="flex items-center flex-col justify-center  h-screen bg-gray-300">
+            <div className="w-full h-20 flex bg-black items-center space-x-3">
                 <div className="rounded-full bg-black w-10 h-10 flex justify-center items-center text-white text-xl font-bold border border-white ml-2">
                     <SlArrowLeft />
                 </div>
                 <p className="w-[50dvh] text-white text-xl font-semibold font-sans">EMAIL VERIFICATION</p>
             </div>
 
-            <div className="h-[100dvh] w-100 flex flex-col items-center bg-white">
+            <div className="h-[100dvh] w-100 flex flex-col items-center ">
                 <div className="w-full">
-                    <p className="text-center w-full h-20 flex justify-center items-end font-semibold text-[#2d292a]">
+                    <p className="text-center w-full h-20 flex justify-center items-end text-sm font-semibold text-[#2d292a]">
                         Code has been sent to (Email) abc****@gmail.com
                     </p>
 
                     {/* OTP Inputs */}
-                    <div className="flex justify-center p-3 my-4 space-x-6">
+                    <div className="flex justify-center p-3 mt-2  space-x-6">
                         {code.map((digit, index) => (
                             <input
                                 key={index} 
                                 value={digit}
                                 readOnly
-                                className="w-16 h-12 border border-gray-500 rounded-lg bg-[rgb(110,96,82)] text-black text-center text-xl font-medium focus:border-black outline-none transition-all"
+                                className="w-16 h-13 shadow-xl shadow-gray-500/40  border border-gray-500 rounded-xl bg-[rgb(110,96,82)] text-white text-center text-xl font-medium focus:border-black outline-none transition-all"
                             />
                         ))}
                     </div>
 
-                    <p className="text-center my-2 font-semibold text-[#2d292a]">
+                    <p className="text-center text-sm mt-3 font-semibold text-[#2d292a]">
                         Resend Code in <span className="font-bold">{timerDisplay}</span>
                     </p>
 
                     {/* Verify Button */}
-                    <div className="h-18 flex items-center justify-center">
-                        <button className="mt-4 w-80 h-12 bg-black p-1 text-white rounded-full flex justify-center items-center text-lg font-medium">
-                            <p className="w-[45dvh]">Verify</p>
-                            <div className="h-10 flex justify-center items-center w-10 text-4xl">
+                    <div className="h-20 flex  items-center justify-center">
+                        <button className="mt-4 w-80 h-12 bg-black p-1 shadow-lg shadow-gray-500 text-white rounded-full flex justify-center items-center text-lg font-medium">
+                            <p className=" ml-8 w-[45dvh]">Verify</p>
+                            <div className="h-12 w-12 flex justify-center items-center  text-4xl">
                                 <BsArrowRightShort className="bg-white text-black rounded-3xl" />
                             </div>
                         </button>
                     </div>
 
                     {/* Numeric Keypad */}
-                    <div className=" grid grid-cols-3  gap-2 mt-5 p-2">
+                    <div className=" grid grid-cols-3  gap-2 mt-5 p-1">
                         {[1, 2, 3, 4, 5, 6, 7, 8, 9, "*", 0].map((num, index) => (
                             <button
                                 key={index}
                                 onClick={() => handleNumberClick(num.toString())}
-                                className="py-3 text-lg font-semibold"
+                                className="p-3 text-lg font-semibold"
                             >
                                 {num}
                             </button>
