@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import Icon from "../assets/ICON (2).png";
 import email from "../assets/ICON.png";
 import password from "../assets/ICON (1).png";
@@ -8,6 +9,11 @@ import oval from "../assets/oval.png";
 import socialmedia from "../assets/Social Media.png"
 
 function Login(){
+    const [showPassword, setShowPassword] = useState(false);
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
 
     return <div className="h-[140dvh] w-full bg-gray-300 ">
                 <div className="h-200 w-1/1 flex flex-col justify-center items-center bg-grey-800 text-base/10  ">
@@ -19,11 +25,10 @@ function Login(){
                                             <h3 className="text-slate-800 text-2xl mt-10  font-semibold ">Let's Sign In.!</h3>
                                             <p className="text-sm">Login to Your Account to Continue your Courses</p>
                                             <img className="w-5 absolute mt-36 ml-4" src={email}/>
-                                            <img className="w-4 absolute ml-81 mt-36" src={stroke}/>
                                             <input className="text-white w-90 bg-stone-500 rounded-lg px-11 py-2" type="text" placeholder="Email" />
                                             <img className=" w-4 absolute mt-53 ml-5" src={password}/>
-                                            <img className="w-4 absolute mt-54 ml-81" src={stroke}/>
-                                            <input  className="text-white rounded-lg px-11 py-2 bg-stone-500" type="password" placeholder="Password"/>
+                                            <img className="w-4 absolute mt-54 ml-81 cursor-pointer" src={showPassword ? stroke : stroke} onClick={togglePasswordVisibility}/>
+                                            <input  className="text-white rounded-lg px-11 py-2 bg-stone-500" type={showPassword ? "text" : "password"}  placeholder="Password"/>
                                                 <div className="flex justify-between mt-3">
                                                         <input className="w-4" type="checkbox"/>
                                                         <p className="mr-33  text-sm">Remember Me</p>
