@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "../components/Home";
 import About from "../components/About";
+import Login from "../components/Login";
 import SplashScreen from "../pages/SplashScreen";
 
 const router = createBrowserRouter([
@@ -11,6 +12,10 @@ const router = createBrowserRouter([
   {
     path: "/about",
     element: <About />,
+  },
+  {  
+    path: "/login",
+    element: <Login />
   },
   {
     path: "/splash",
