@@ -5,6 +5,7 @@ import Login from "../components/Login";
 import SplashScreen from "../pages/SplashScreen";
 import Emailverification from "../components/Emailverification";
 import Register from "../components/Register";
+import FillYourProfile from "../pages/FillYourProfile";
 
 const router = createBrowserRouter([
   {
@@ -15,9 +16,9 @@ const router = createBrowserRouter([
     path: "/about",
     element: <About />,
   },
-  {  
+  {
     path: "/login",
-    element: <Login />
+    element: <Login />,
   },
   {
     path: "/splash",
@@ -29,8 +30,12 @@ const router = createBrowserRouter([
   },
   {
     path: "/register",
-    element: <Register/>
-  }
+    element: <Register />,
+  },
+  {
+    path: "/fill-profile",
+    element: <FillYourProfile />,
+  },
 ]);
 
 export default function Router() {
