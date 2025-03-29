@@ -43,6 +43,38 @@ function EmailVerification() {
             return newCode;
         });
     };
+    
+    const handleChange = (e, index) => {
+        const value = e.target.value;
+    
+        if (/^\d?$/.test(value)) { // Allow only single digits
+            const newCode = [...code];
+            newCode[index] = value;
+            setCode(newCode);
+    
+            // Move to the next input field if a digit is entered
+            if (value && index < code.length - 1) {
+                document.getElementById(`input-${index + 1}`).focus();
+            }
+        }
+    };
+
+
+    const handleKeyDown = (e, index) => {
+        if (e.key === "Backspace") {
+            const newCode = [...code];
+    
+            // If input is already empty, move focus back and clear previous input
+            if (!newCode[index] && index > 0) {
+                newCode[index - 1] = ""; // Clear previous input
+                setCode(newCode);
+                document.getElementById(`input-${index - 1}`).focus();
+            } else {
+                newCode[index] = ""; // Clear current input
+                setCode(newCode);
+            }
+        }
+    };
 
     return (
         <div className="flex items-center flex-col justify-center  h-screen bg-gray-300">
@@ -59,16 +91,19 @@ function EmailVerification() {
                         Code has been sent to (Email) abc****@gmail.com
                     </p>
 
-                    {/* OTP Inputs */}
-                    <div className="flex justify-center p-3 mt-2  space-x-6">
+                    <div className="flex justify-center p-3 mt-2 space-x-6">
                         {code.map((digit, index) => (
                             <input
-                                key={index} 
-                                value={digit}
-                                readOnly
-                                className="w-16 h-13 shadow-xl shadow-gray-500/40  border border-gray-500 rounded-xl bg-[rgb(110,96,82)] text-white text-center text-xl font-medium focus:border-black outline-none transition-all"
-                            />
-                        ))}
+                                 key={index}
+                                 id={`input-${index}`}
+                                 type="text"
+                                 maxLength="1"
+                                 value={digit}
+                                 onChange={(e) => handleChange(e, index)}
+                                 onKeyDown={(e) => handleKeyDown(e, index)}
+                                 className="w-16 h-13 shadow-xl shadow-gray-500/40 border border-gray-500 rounded-xl bg-[rgb(110,96,82)] text-white text-center text-xl font-medium focus:border-black outline-none transition-all"
+                             />
+                         ))}
                     </div>
 
                     <p className="text-center text-sm mt-3 font-semibold text-[#2d292a]">
