@@ -5,7 +5,6 @@ import password from "../assets/ICON (1).png";
 import arrow from "../assets/arrow.png";
 import Oval from "../assets/Oval (2).png"
 import socialmedia from "../assets/Social Media.png"
-import { FcGoogle } from "react-icons/fc";
 import { FaRegEye } from "react-icons/fa6";
 import { FaRegEyeSlash } from "react-icons/fa6";
 
@@ -20,7 +19,7 @@ function Login() {
           <img className="w-16" src={topimg} alt="Login Logo" />
           <h5 className="text-2xl font-bold mb-5">Service Connect</h5>
         </div>
-        <h3 className="text-slate-800 text-2xl mb-6 font-semibold flex mr-22 lg:mr-47">Getting Started..!</h3>
+        <h3 className="text-[#202244] text-2xl mb-6 font-semibold flex mr-22 lg:mr-47">Getting Started..!</h3>
         
         <div className="w-full flex flex-col gap-5 relative">
           <div className="relative shadow-sm">
@@ -65,9 +64,9 @@ function Login() {
               {showConfirmPassword ? <FaRegEyeSlash /> : <FaRegEye />}
             </button>
           </div> 
-          <div className="flex justify-between text-sm mt-3">
-            <label className="flex items-center gap-2 cursor-pointer">
-              <input type="radio" className="w-4 h-4" /> Agree to Terms & Conditions
+          <div className="flex justify-between text-sm ">
+            <label className="flex items-center gap-2 cursor-pointer text-[#545454] font-bold">
+              <input type="radio" className="w-4 h-4 " /> Agree to Terms & Conditions
             </label>
           </div>
           <button className="bg-slate-900 text-white py-3 rounded-full h-14  flex justify-center items-center w-full hover:bg-slate-700 transition relative">
@@ -77,10 +76,10 @@ function Login() {
               <img className="w-5 absolute" src={arrow} alt="arrow icon" />
             </div>
           </button>
-          <p className="text-center mt-1">Or Continue With</p>
-          <div className="flex justify-center mt-1 cursor-pointer">
+          <p className="text-center mt-4 font-semibold text-[#545454]">Or Continue With</p>
+          <div className="flex justify-center  cursor-pointer">
             <div className="mr-26 cursor-pointer"> 
-               <img className="ml-27 w-40" src={socialmedia}/>
+               <img className="ml-25 w-40" src={socialmedia}/>
             </div>
           </div>
           <p className="text-center">
