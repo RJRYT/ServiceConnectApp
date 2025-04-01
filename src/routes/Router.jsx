@@ -5,6 +5,8 @@ import Login from "../components/Login";
 import SplashScreen from "../pages/SplashScreen";
 import Emailverification from "../components/Emailverification";
 import Register from "../components/Register";
+import Forgotpassword from "../components/forgotpassword";
+import Newpassword from "../components/newpassword";
 
 const router = createBrowserRouter([
   {
@@ -30,6 +32,14 @@ const router = createBrowserRouter([
   {
     path: "/register",
     element: <Register/>
+  },
+  {
+    path: "/frgtpassword",
+    element: <Forgotpassword/>
+  },
+  {
+    path:"/newpassword",
+    element:<Newpassword/>
   }
 ]);
 
