@@ -7,6 +7,8 @@ import Emailverification from "../components/Emailverification";
 import Register from "../components/Register";
 import Forgotpassword from "../components/forgotpassword";
 import Newpassword from "../components/newpassword";
+import Header from "../components/header";
+import Submitbutton from "../components/submitbutton";
 
 const router = createBrowserRouter([
   {
