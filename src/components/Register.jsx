@@ -13,13 +13,13 @@ function Login() {
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
   return (
-    <div className="h-screen  w-full bg-gray-300 flex justify-center items-center py-3">
-      <div className="w-full max-w-md bg-gray-300 p-8  rounded-xl flex flex-col items-center">
-        <div className="flex items-center gap-3 mb-4">
+    <div className="h-screen w-full bg-gray-300 flex justify-center items-center ">
+      <div className="h-screen w-full max-w-md bg-grey-300 p-8 rounded-xl flex flex-col justify-center items-center">
+        <div className="flex items-center gap-3 mb-8">
           <img className="w-16" src={topimg} alt="Login Logo" />
-          <h5 className="text-2xl font-bold mb-5">Service Connect</h5>
+          <h5 className="text-2xl font-semibold mb-4">Service Connect</h5>
         </div>
-        <h3 className="text-[#202244] text-2xl mb-6 font-semibold flex mr-22 lg:mr-47">Getting Started..!</h3>
+        <h3 className="text-[#202244] text-2xl mb-4 font-semibold flex mr-22 lg:mr-49">Getting Started..!</h3>
         
         <div className="w-full flex flex-col gap-5 relative">
           <div className="relative shadow-sm">
@@ -76,7 +76,7 @@ function Login() {
               <img className="w-5 absolute" src={arrow} alt="arrow icon" />
             </div>
           </button>
-          <p className="text-center mt-4 font-semibold text-[#545454]">Or Continue With</p>
+          <p className="text-center mt-1 font-semibold text-[#545454]">Or Continue With</p>
           <div className="flex justify-center  cursor-pointer">
             <div className="mr-26 cursor-pointer"> 
                <img className="ml-25 w-40" src={socialmedia}/>

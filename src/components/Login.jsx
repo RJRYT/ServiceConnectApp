@@ -20,7 +20,7 @@ function Login(){
                 <div className="w-full  flex  flex-col justify-center items-center  bg-grey-800 ">
                             <div className="flex gap-2">
                                     <img className="w-15" src={Icon} alt="Login page Logo"/>
-                                    <h5 className="text-2xl mt-1 mr-10 font-bold text-[#1D1F2A] ">Service Connect</h5>
+                                    <h5 className="text-2xl mt-1 mr-10 font-semibold text-[#1D1F2A] ">Service Connect</h5>
                                 </div>
                                         <div className="flex flex-col gap-4 relative">
                                             <h3 className="text-[#202244] text-2xl mt-7  font-semibold ">Let's Sign In.!</h3>
