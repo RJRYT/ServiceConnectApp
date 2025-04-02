@@ -1,14 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { SlArrowLeft } from "react-icons/sl";
-import user from "../assets/Profile.png";
+import user from "../assets/default_user.jpg";
 import { TfiEmail } from "react-icons/tfi";
 import ProfileInput from "../components/ProfileInput";
 import { BsCalendarDate } from "react-icons/bs";
 import { FaCircleArrowRight } from "react-icons/fa6";
+import { FaRegEdit } from "react-icons/fa";
 import LocationPopup from "../components/LocationPopup";
 
 function FillYourProfile() {
   const genderOptions = ["Male", "Female", "Others"];
+
+  const [profilePic, setProfilePic] = useState(null);
 
   const [isModalVisible, setModalVisible] = useState(false);
 
@@ -47,11 +50,27 @@ function FillYourProfile() {
 
         <div className="flex flex-col items-center justify-center px-2 sm:px-6">
           {/* pfp */}
-          <div className=" my-4 md:my-10">
-            <img
-              className="h-28 md:h-36 w-auto"
-              src={user}
-              alt="default user image"
+          <div className="flex flex-col items-center justify-center relative">
+            <div className="my-5">
+              <img
+                className="h-32 rounded-full"
+                src={profilePic ? URL.createObjectURL(profilePic) : user}
+                id="file-ip-1-preview"
+              />
+            </div>
+            <label
+              htmlFor="file-ip-1"
+              className="cursor-pointer absolute bottom-6 right-0 p-2 bg-gray-500 rounded-full hover:bg-gray-800"
+            >
+              <FaRegEdit size={16} color="white" />
+            </label>
+            <input
+              type="file"
+              id="file-ip-1"
+              className="hidden"
+              onChange={(e) => {
+                setProfilePic(e.target.files[0]);
+              }}
             />
           </div>
           {/* Input Boxes */}
