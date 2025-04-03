@@ -10,6 +10,7 @@ import Forgotpassword from "../components/forgotpassword";
 import Newpassword from "../components/newpassword";
 import Header from "../components/header";
 import Submitbutton from "../components/submitbutton";
+import Test from "../test";
 
 const router = createBrowserRouter([
   {
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
   {
     path:"/newpassword",
     element:<Newpassword/>
+  },
+  {
+    path:"/test",
+    element:<Test/>
   }
 ]);
 

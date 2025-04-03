@@ -15,7 +15,7 @@ function ProfileInput({
     dateInputRef.current?.showPicker();
   };
   return (
-    <div className="relative max-w-[360px] h-16">
+    <div className="relative max-w-[360px] min-w-[360px] h-16">
       {icon}
       {type === "dropdown" ? (
         <select

@@ -1,55 +1,47 @@
-import React from "react";
-import { useState } from "react";
-import Icon from "../assets/ICON (2).png";
+import React from 'react'
+import topimg from "../assets/ICON (2).png";
+import ProfileInput from '../components/ProfileInput';
+import Submitbutton from '../components/submitbutton';
+import { FcGoogle } from "react-icons/fc";
 import email from "../assets/ICON.png";
-import password from "../assets/ICON (1).png";
-import stroke from "../assets/Stroke 3.png";
-import arrow from "../assets/arrow.png";
-import oval from "../assets/oval.png";
-import socialmedia from "../assets/Social Media.png"
+import { TfiEmail } from "react-icons/tfi";
+import { MdLockOutline } from "react-icons/md";
 
-function Login(){
-    const [showPassword, setShowPassword] = useState(false);
 
-  const togglePasswordVisibility = () => {
-    setShowPassword(!showPassword);
-  };
-
-    return <div className="h-[140dvh] w-full bg-gray-300 ">
-                <div className="h-200 w-1/1 flex flex-col justify-center items-center bg-grey-800 text-base/10  ">
-                            <div className="flex gap-2">
-                                    <img className="w-15" src={Icon} alt="Login page Logo"/>
-                                    <h5 className="text-2xl mt-1 mr-10 font-semibold">Service Connect</h5>
-                                </div>
-                                        <div className="flex flex-col gap-4 relative">
-                                            <h3 className="text-slate-800 text-2xl mt-10  font-semibold ">Let's Sign In.!</h3>
-                                            <p className="text-sm">Login to Your Account to Continue your Courses</p>
-                                            <img className="w-5 absolute mt-36 ml-4" src={email}/>
-                                            <input className="text-white w-90 bg-stone-500 rounded-lg px-11 py-2" type="text" placeholder="Email" />
-                                            <img className=" w-4 absolute mt-53 ml-5" src={password}/>
-                                            <img className="w-4 absolute mt-54 ml-81 cursor-pointer" src={showPassword ? stroke : stroke} onClick={togglePasswordVisibility}/>
-                                            <input  className="text-white rounded-lg px-11 py-2 bg-stone-500" type={showPassword ? "text" : "password"}  placeholder="Password"/>
-                                                <div className="flex justify-between mt-3">
-                                                        <input className="w-4" type="checkbox"/>
-                                                        <p className="mr-33  text-sm">Remember Me</p>
-                                                        <p className="text-sm">Forgot Password?</p>
-                                                </div>
-                                                    <button className="text-white bg-slate-900  p-3 rounded-full cursor-pointer mt-10 realtive">Sign in</button>
-                                                        <img className=" w-13 absolute mx-75 mt-90 " src={oval}/>
-                                                        <img className=" w-6 absolute mx-79 mt-94" src={arrow}/>
-
-                                                        <p className="text-md ml-32">Or Continue With</p>
-
-                                                            <div className="mt-2 cursor-pointer">
-                                                                <img className="ml-27 w-40" src={socialmedia}/>
-                                                            </div>
-                                                        <p className="ml-20 mt-7">Don’t have an Account? <a className="underline font-bold" href="">SIGN UP</a></p>
-                                                   
-                                                
-                                        </div>
-                        </div>
-             
+function Login() {
+  return (
+    <div className='h-screen w-full  bg-gray-300 px-5'>
+      <div className='flex justify-center pt-15'>
+        <img src={topimg} className='w-23' alt="" />
+        <h1 className='pt-5 text-2xl font-semibold ml-2'>Service Connect</h1>
+      </div>
+      <h1 className='font-bold text-xl my-3 lg:my-1 lg:text-2xl lg:text-center lg:mr-55'>Lets Sign in.!</h1>
+      <p className='text-sm font-semibold text-stone-600 my-3 lg:my-1 lg:text-sm lg:text-center lg:mr-10 lg:my-2'>Login to Your Account to Continue your Courses</p>
+      <div className='py-1 flex flex-col justify-center items-center gap-2'>
+            <ProfileInput  icon={<TfiEmail className="absolute left-4 top-5" size={25} color="white"/>} className='' type="text" placeholder="Email" />
+           <ProfileInput  icon={<MdLockOutline className="absolute left-4 top-5" size={25} color="white"/>} className='' type="password" placeholder="Password" />
+      </div>
+    <div className='flex items-center justify-center gap-20  lg:gap-25 my-3'>
+        <div className='flex'>
+        <input className="w-5" type="checkbox" />
+        <p className="ml-2 font-semibold">Remember Me</p> 
+        </div>
+        <div>
+        <a href="" className="font-semibold hover:text-stone-600">Forgot Password?</a>  
+        </div>
     </div>
+      <div className='flex justify-center'>
+        <Submitbutton title="SIGN IN"/>
+        </div>
+        <p className='text-center mt-4 mb-4 lg:mt-7 font-semibold'>Or Continue with</p>
+        <div className="flex justify-center mt-1 cursor-pointer my-2 lg:my-5">
+            <div className="bg-gray-400 w-12 h-12 flex justify-center items-center rounded-4xl text-2xl"> 
+              <FcGoogle />
+            </div>
+          </div>
+          <p className='text-center'>Aldready hava an Account <span><a href="" className='font-semibold underline'>LOG IN</a></span></p>
+    </div>
+  )
 }
 
-export default Login;
+export default Login
