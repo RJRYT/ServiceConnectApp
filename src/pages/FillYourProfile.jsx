@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import { SlArrowLeft } from "react-icons/sl";
 import user from "../assets/default_user.jpg";
 import { TfiEmail } from "react-icons/tfi";
-import ProfileInput from "../components/ProfileInput";
 import { BsCalendarDate } from "react-icons/bs";
 import { FaCircleArrowRight } from "react-icons/fa6";
 import { FaRegEdit } from "react-icons/fa";
 import LocationPopup from "../components/LocationPopup";
+import Input from "../components/Input";
 
 function FillYourProfile() {
   const genderOptions = ["Male", "Female", "Others"];
@@ -25,6 +25,7 @@ function FillYourProfile() {
 
   return (
     <>
+      {/* popup */}
       <LocationPopup isVisible={isModalVisible} onClose={closeModal}>
         <h1 className=" text-center text-2xl font-medium  font-aldrich">
           Allow Location
@@ -34,12 +35,12 @@ function FillYourProfile() {
         </button>
         <div>
           <p className="my-1">Manually Enter Location</p>
-          <ProfileInput type="text" placeholder="Location" />
+          <Input type="text" placeholder="Location" />
         </div>
       </LocationPopup>
-      <div className="flex flex-col h-[100%] bg-gray-300">
+      <div className="flex flex-col min-h-screen bg-gray-300">
         {/* Header */}
-        <div className="w-full h-20 flex bg-[#1D1F2A] items-center  space-x-3">
+        <div className="w-full h-20 flex bg-[#1D1F2A] items-center space-x-3">
           <div className="rounded-full bg-[#1D1F2A] w-10 h-10 flex justify-center items-center text-white text-xl font-bold border border-white ml-2">
             <SlArrowLeft />
           </div>
@@ -74,11 +75,11 @@ function FillYourProfile() {
             />
           </div>
           {/* Input Boxes */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  gap-4">
-            <ProfileInput type="text" placeholder="Full Name" />
-            <ProfileInput type="text" placeholder="Address" />
+          <div className=" my-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  gap-4">
+            <Input type="text" placeholder="Full Name" />
+            <Input type="text" placeholder="Address" />
 
-            <ProfileInput
+            <Input
               type="date"
               placeholder="Date of Birth"
               icon={
@@ -89,7 +90,7 @@ function FillYourProfile() {
                 />
               }
             />
-            <ProfileInput
+            <Input
               type="email"
               placeholder="Email"
               icon={
@@ -101,17 +102,17 @@ function FillYourProfile() {
               }
             />
 
-            <ProfileInput type="number" placeholder="Phone" />
-            <ProfileInput
+            <Input type="number" placeholder="Phone" />
+            <Input
               type="dropdown"
               placeholder="Gender"
               options={genderOptions}
             />
-            <ProfileInput type="text" placeholder="House Name" />
-            <ProfileInput type="text" placeholder="Land Mark" />
-            <ProfileInput type="text" placeholder="Pin code" />
-            <ProfileInput type="text" placeholder="District" />
-            <ProfileInput type="text" placeholder="State" />
+            <Input type="text" placeholder="House Name" />
+            <Input type="text" placeholder="Land Mark" />
+            <Input type="text" placeholder="Pin code" />
+            <Input type="text" placeholder="District" />
+            <Input type="text" placeholder="State" />
           </div>
 
           {/* Continue Button */}

@@ -6,7 +6,7 @@ import arrow from "../assets/arrow.png";
 import round from "../assets/oval.png";
 import { FcGoogle } from "react-icons/fc";
 import { FaRegEye } from "react-icons/fa6";
-import { FaRegEyeSlash } from "react-icons/fa6"
+import { FaRegEyeSlash } from "react-icons/fa6";
 
 function Login() {
   const [showPassword, setShowPassword] = useState(false);
@@ -19,25 +19,39 @@ function Login() {
           <img className="w-16" src={topimg} alt="Login Logo" />
           <h5 className="text-2xl font-semibold mb-5">Service Connect</h5>
         </div>
-        <h3 className="text-2xl mb-6 font-bold flex mr-22 lg:mr-47">Getting Started..!</h3>
-        
+        <h3 className="text-2xl mb-6 font-bold flex mr-22 lg:mr-47">
+          Getting Started..!
+        </h3>
+
         <div className="w-full flex flex-col gap-5 relative">
           <div className="relative shadow-sm">
-            <img className="w-5 absolute left-4 top-1/2 -translate-y-1/2" src={email} alt="email icon" />
+            <img
+              className="w-5 absolute left-4 top-1/2 -translate-y-1/2"
+              src={email}
+              alt="email icon"
+            />
             <input
               className="w-full bg-stone-600 text-white rounded-lg px-12 py-3 placeholder-white focus:outline-none"
               type="text"
               placeholder="Email"
-              onChange={""} name="" id=""
+              onChange={""}
+              name=""
+              id=""
             />
           </div>
           <div className="relative">
-            <img className="w-4 absolute left-4 top-1/2 -translate-y-1/2" src={password} alt="password icon" />
+            <img
+              className="w-4 absolute left-4 top-1/2 -translate-y-1/2"
+              src={password}
+              alt="password icon"
+            />
             <input
               className="w-full bg-stone-600 text-white rounded-lg px-12 py-3 placeholder-white focus:outline-none"
               type={showPassword ? "text" : "password"}
               placeholder="Password"
-              onChange={""} name="" id=""
+              onChange={""}
+              name=""
+              id=""
             />
             <button
               type="button"
@@ -48,12 +62,18 @@ function Login() {
             </button>
           </div>
           <div className="relative">
-            <img className="w-4 absolute left-4 top-1/2 -translate-y-1/2" src={password} alt="password icon" />
+            <img
+              className="w-4 absolute left-4 top-1/2 -translate-y-1/2"
+              src={password}
+              alt="password icon"
+            />
             <input
               className="w-full bg-stone-600 text-white rounded-lg px-12 py-3 placeholder-white focus:outline-none"
               type={showConfirmPassword ? "text" : "password"}
               placeholder="Confirm Password"
-              onChange={""} name="" id=""
+              onChange={""}
+              name=""
+              id=""
               onFocus={() => setShowPassword(false)}
             />
             <button
@@ -63,10 +83,11 @@ function Login() {
             >
               {showConfirmPassword ? <FaRegEyeSlash /> : <FaRegEye />}
             </button>
-          </div> 
+          </div>
           <div className="flex justify-between text-sm mt-3">
             <label className="flex items-center gap-2 cursor-pointer">
-              <input type="radio" className="w-4 h-4" /> Agree to Terms & Conditions
+              <input type="radio" className="w-4 h-4" /> Agree to Terms &
+              Conditions
             </label>
           </div>
           <button className="bg-slate-900 text-white py-3 rounded-full mt-2 flex justify-center items-center w-full hover:bg-slate-700 transition relative">
@@ -78,12 +99,15 @@ function Login() {
           </button>
           <p className="text-center mt-1">Or Continue With</p>
           <div className="flex justify-center mt-1 cursor-pointer">
-            <div className="bg-gray-400 w-12 h-12 flex justify-center items-center rounded-4xl text-2xl"> 
+            <div className="bg-gray-400 w-12 h-12 flex justify-center items-center rounded-4xl text-2xl">
               <FcGoogle />
             </div>
           </div>
           <p className="text-center">
-            Don’t have an Account? <a className="underline font-bold hover:text-gray-400" href="#">SIGN UP</a>
+            Don’t have an Account?{" "}
+            <a className="underline font-bold hover:text-gray-400" href="#">
+              SIGN UP
+            </a>
           </p>
         </div>
       </div>
