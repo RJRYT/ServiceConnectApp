@@ -1,9 +1,8 @@
 import React from 'react'
 import topimg from "../assets/ICON (2).png";
-import ProfileInput from '../components/ProfileInput';
+import Input from "../components/Input";
 import Submitbutton from '../components/submitbutton';
 import { FcGoogle } from "react-icons/fc";
-import email from "../assets/ICON.png";
 import { TfiEmail } from "react-icons/tfi";
 import { MdLockOutline } from "react-icons/md";
 
@@ -18,8 +17,8 @@ function Login() {
       <h1 className='font-bold text-xl my-3 lg:my-1 lg:text-2xl lg:text-center lg:mr-55'>Lets Sign in.!</h1>
       <p className='text-sm font-semibold text-stone-600 my-3 lg:my-1 lg:text-sm lg:text-center lg:mr-10'>Login to Your Account to Continue your Courses</p>
       <div className='py-1 flex flex-col justify-center items-center gap-2'>
-            <ProfileInput  icon={<TfiEmail className="absolute left-4 top-5" size={25} color="white"/>} className='' type="text" placeholder="Email" />
-           <ProfileInput  icon={<MdLockOutline className="absolute left-4 top-5" size={25} color="white"/>} className='' type="password" placeholder="Password" />
+            <Input  icon={<TfiEmail className="absolute left-4 top-5" size={25} color="white"/>} className='' type="text" placeholder="Email" />
+           <Input  icon={<MdLockOutline className="absolute left-4 top-5" size={25} color="white"/>} className='' type="password" placeholder="Password" />
       </div>
     <div className='flex items-center justify-center gap-20  lg:gap-25 my-3'>
         <div className='flex'>

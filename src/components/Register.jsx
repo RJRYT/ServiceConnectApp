@@ -1,9 +1,8 @@
 import React from 'react'
 import topimg from "../assets/ICON (2).png";
-import ProfileInput from '../components/ProfileInput';
+import Input from '../components/Input';
 import Submitbutton from '../components/submitbutton';
 import { FcGoogle } from "react-icons/fc";
-import email from "../assets/ICON.png";
 import { TfiEmail } from "react-icons/tfi";
 import { MdLockOutline } from "react-icons/md";
 
@@ -17,9 +16,9 @@ function Register() {
       </div>
       <h1 className='font-semibold text-xl my-3 lg:my-1 lg:text-2xl lg:text-center lg:mr-40'>Getting Started...!</h1>
       <div className='py-1 flex flex-col justify-center items-center gap-2'>
-            <ProfileInput  icon={<TfiEmail className="absolute left-4 top-5" size={25} color="white"/>} className='' type="text" placeholder="Email" />
-           <ProfileInput  icon={<MdLockOutline className="absolute left-4 top-5" size={25} color="white"/>} className='' type="password" placeholder="Password" />
-           <ProfileInput  icon={<MdLockOutline className="absolute left-4 top-5" size={25} color="white"/>} className='' type="password" placeholder="Confirm Password" />
+            <Input  icon={<TfiEmail className="absolute left-4 top-5" size={25} color="white"/>} className='' type="text" placeholder="Email" />
+           <Input  icon={<MdLockOutline className="absolute left-4 top-5" size={25} color="white"/>} className='' type="password" placeholder="Password" />
+           <Input  icon={<MdLockOutline className="absolute left-4 top-5" size={25} color="white"/>} className='' type="password" placeholder="Confirm Password" />
       </div>
       <div className='flex mt-2 mb-2 lg:justify-center lg:mr-35'>
           <input type="radio"  />
