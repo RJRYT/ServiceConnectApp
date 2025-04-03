@@ -5,6 +5,8 @@ import Login from "../components/Login";
 import SplashScreen from "../pages/SplashScreen";
 import Emailverification from "../components/Emailverification";
 import Register from "../components/Register";
+import Congratulationmodal from "../components/modal/Congratulationmodal";
+import Congratulationmodall from "../components/modal/Congratulations";
 
 const router = createBrowserRouter([
   {
@@ -30,6 +32,14 @@ const router = createBrowserRouter([
   {
     path: "/register",
     element: <Register/>
+  },
+  {
+    path: "/congratulationmodall",
+    element: <Congratulationmodall/>
+  },
+  {
+    path: "/congratulationmodal",
+    element: <Congratulationmodal/>
   }
 ]);
 
