@@ -9,30 +9,30 @@ import LoginButton from "../components/LoginButton";
 function SplashScreen() {
   return (
     <section className="min-h-dvh w-full bg-[#1D1F2A] overflow-hidden">
-      <div className="flex flex-col items-center justify-center gap-10 ">
-        <div className="h-[428px] w-[428px] relative flex  items-center justify-center ">
+      <div className="flex flex-col items-center justify-center gap-5 ">
+        <div className="h-[400px] w-[400px] relative flex  items-center justify-center mt-10 ">
           <img
             src={shape}
-            className="max-w-[410px] h-auto absolute inset-0 m-auto z-10 "
+            className="max-w-[360px] h-auto absolute inset-0 m-auto z-10 "
             alt="shape"
           />
 
           <img
             src={oval}
-            className="max-w-[330px] h-auto absolute inset-0 m-auto z-0"
+            className="max-w-[290px] h-auto absolute inset-0 m-auto z-0"
             alt="oval"
           />
 
           <img
             src={logo}
-            className="max-w-[116px] h-auto absolute inset-0 m-auto z-20"
+            className="max-w-[90px] h-auto absolute inset-0 m-auto z-20"
             alt="logo"
           />
           <div className="absolute bottom-32 left-34 m-auto z-30">
-            <h3 className="text-white font-medium text-4xl font-aubrey tracking-wider">
+            <h3 className="text-white font-medium text-3xl font-aubrey tracking-wider">
               Service Connect
             </h3>
-            <p className="text-white font-bold text-xs uppercase font-poppins">
+            <p className="text-white font-bold text-[10px] uppercase font-poppins">
               Let's grow with our community
             </p>
           </div>
