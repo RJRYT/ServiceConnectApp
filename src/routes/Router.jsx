@@ -1,6 +1,4 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Home from "../components/Home";
-import About from "../components/About";
 import Login from "../components/Login";
 import SplashScreen from "../pages/SplashScreen";
 import Emailverification from "../components/Emailverification";
@@ -15,19 +13,11 @@ import Allcategory from "../pages/allcategory";
 const router = createBrowserRouter([
   {
     path: "",
-    element: <Home />,
-  },
-  {
-    path: "/about",
-    element: <About />,
+    element: <SplashScreen />,
   },
   {
     path: "/login",
     element: <Login />,
-  },
-  {
-    path: "/splash",
-    element: <SplashScreen />,
   },
   {
     path: "/emailverification",
@@ -51,15 +41,15 @@ const router = createBrowserRouter([
   },
   {
     path: "/congratulationmodall",
-    element: <Congratulationmodall/>
+    element: <Congratulationmodall />,
   },
   {
     path: "/congratulationmodal",
-    element: <Congratulationmodal/>
+    element: <Congratulationmodal />,
   },
   {
     path: "/allcategory",
-    element: <Allcategory/>
+    element: <Allcategory />,
   },
 ]);
 
