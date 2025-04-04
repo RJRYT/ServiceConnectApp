@@ -40,12 +40,12 @@ const router = createBrowserRouter([
   },
   {
     path: "/frgtpassword",
-    element: <Forgotpassword/>
+    element: <Forgotpassword />,
   },
   {
-    path:"/newpassword",
-    element:<Newpassword/>
-  }
+    path: "/newpassword",
+    element: <Newpassword />,
+  },
 ]);
 
 export default function Router() {

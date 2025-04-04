@@ -1,112 +1,88 @@
-import React, { useState } from "react";
+import React from "react";
 import topimg from "../assets/ICON (2).png";
-import email from "../assets/ICON.png";
-import password from "../assets/ICON (1).png";
-import arrow from "../assets/arrow.png";
-import Oval from "../assets/Oval (2).png"
-import socialmedia from "../assets/Social Media.png"
-import { FaRegEye } from "react-icons/fa6";
-import { FaRegEyeSlash } from "react-icons/fa6";
+import Input from "../components/Input";
+import Submitbutton from "../components/submitbutton";
+import { FcGoogle } from "react-icons/fc";
+import { TfiEmail } from "react-icons/tfi";
+import { MdLockOutline } from "react-icons/md";
 
-function Login() {
-  const [showPassword, setShowPassword] = useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-
+function Register() {
   return (
-    <div className="h-screen w-full bg-gray-300 flex justify-center items-center ">
-      <div className="h-screen w-full max-w-md bg-grey-300 p-8 rounded-xl flex flex-col justify-center items-center">
-        <div className="flex items-center gap-3 mb-8">
-          <img className="w-16" src={topimg} alt="Login Logo" />
-          <h5 className="text-2xl font-semibold mb-4">Service Connect</h5>
+    <div className="min-h-screen w-full  bg-gray-300 px-5">
+      <div className="flex justify-center pt-15">
+        <img src={topimg} className="w-23" alt="" />
+        <h1 className="pt-5 text-2xl font-semibold ml-2">Service Connect</h1>
+      </div>
+
+      <div className="py-1 flex flex-col justify-center items-center gap-2">
+        <div>
+          <h1 className="font-semibold text-xl my-3 lg:my-1 lg:text-2xl mr-42 sm:mr-48 lg:mr-42">
+            Getting Started...!
+          </h1>
         </div>
-        <h3 className="text-[#202244] text-2xl mb-4 font-semibold flex mr-22 lg:mr-49">Getting Started..!</h3>
-        
-        <div className="w-full flex flex-col gap-5 relative">
-          <div className="relative shadow-sm">
-            <img
-              className="w-5 absolute left-4 top-1/2 -translate-y-1/2"
-              src={email}
-              alt="email icon"
+        <Input
+          icon={
+            <TfiEmail
+              className="absolute left-4 top-5"
+              size={25}
+              color="white"
             />
-            <input
-              className="w-full h-14 bg-stone-500 text-white rounded-lg px-12 py-3 placeholder-white focus:outline-none"
-              type="text"
-              placeholder="Email"
-              onChange={""}
-              name=""
-              id=""
+          }
+          className="min-w-[360px]"
+          type="text"
+          placeholder="Email"
+        />
+        <Input
+          icon={
+            <MdLockOutline
+              className="absolute left-4 top-5 z-10"
+              size={25}
+              color="white"
             />
-          </div>
-          <div className="relative">
-            <img
-              className="w-4 absolute left-4 top-1/2 -translate-y-1/2"
-              src={password}
-              alt="password icon"
+          }
+          className="min-w-[360px]"
+          type="password"
+          placeholder="Password"
+        />
+        <Input
+          icon={
+            <MdLockOutline
+              className="absolute left-4 top-5 z-10"
+              size={25}
+              color="white"
             />
-            <input
-              className="w-full h-14 bg-stone-500 text-white rounded-lg px-12 py-3 placeholder-white focus:outline-none"
-              type={showPassword ? "text" : "password"}
-              placeholder="Password"
-              onChange={""}
-              name=""
-              id=""
-            />
-            <button
-              type="button"
-              onClick={() => setShowPassword(!showPassword)}
-              className="absolute right-4 top-1/2 -translate-y-1/2 text-white"
-            >
-              {showPassword ? <FaRegEyeSlash /> : <FaRegEye />}
-            </button>
-          </div>
-          <div className="relative">
-            <img
-              className="w-4 absolute left-4 top-1/2 -translate-y-1/2"
-              src={password}
-              alt="password icon"
-            />
-            <input
-              className="w-full h-14 bg-stone-500 text-white rounded-lg px-12 py-3 placeholder-white focus:outline-none"
-              type={showConfirmPassword ? "text" : "password"}
-              placeholder="Confirm Password"
-              onChange={""}
-              name=""
-              id=""
-              onFocus={() => setShowPassword(false)}
-            />
-            <button
-              type="button"
-              onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-              className="absolute right-4 top-1/2 -translate-y-1/2 text-white"
-            >
-              {showConfirmPassword ? <FaRegEyeSlash /> : <FaRegEye />}
-            </button>
-          </div> 
-          <div className="flex justify-between text-sm ">
-            <label className="flex items-center gap-2 cursor-pointer text-[#545454] font-bold">
-              <input type="radio" className="w-4 h-4 " /> Agree to Terms & Conditions
-            </label>
-          </div>
-          <button className="bg-slate-900 text-white py-3 rounded-full h-14  flex justify-center items-center w-full hover:bg-slate-700 transition relative">
-            Sign in
-            <div className="absolute flex justify-center items-center right-2">
-              <img className="w-12" src={Oval} alt="oval decoration" />
-              <img className="w-5 absolute" src={arrow} alt="arrow icon" />
-            </div>
-          </button>
-          <p className="text-center mt-1 font-semibold text-[#545454]">Or Continue With</p>
-          <div className="flex justify-center  cursor-pointer">
-            <div className="mr-26 cursor-pointer"> 
-               <img className="ml-25 w-40" src={socialmedia}/>
-            </div>
-          </div>
-          <p className="text-center">
-            Don’t have an Account? <a className="underline font-bold hover:text-gray-400" href="#">SIGN IN</a>
-          </p>
+          }
+          className="min-w-[360px]"
+          type="password"
+          placeholder="Confirm Password"
+        />
+        <div className="flex mt-2 mb-2 mr-28 sm:mr-36">
+          <input type="radio" />
+          <p>Agree to Terms & Conditions</p>
         </div>
       </div>
+
+      <div className="flex justify-center">
+        <Submitbutton title="SIGN UP" />
+      </div>
+      <p className="text-center mt-4 mb-4 lg:mt-7 font-semibold">
+        Or Continue with
+      </p>
+      <div className="flex justify-center mt-1 cursor-pointer my-2 lg:my-5">
+        <div className="bg-gray-400 w-12 h-12 flex justify-center items-center rounded-4xl text-2xl">
+          <FcGoogle />
+        </div>
+      </div>
+      <p className="text-center">
+        Aldready hava an Account{" "}
+        <span>
+          <a href="" className="font-semibold underline">
+            LOG IN
+          </a>
+        </span>
+      </p>
     </div>
   );
 }
 
-export default Login;
+export default Register;
