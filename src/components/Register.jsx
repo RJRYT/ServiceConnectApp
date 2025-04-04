@@ -23,21 +23,33 @@ function Login() {
         
         <div className="w-full flex flex-col gap-5 relative">
           <div className="relative shadow-sm">
-            <img className="w-5 absolute left-4 top-1/2 -translate-y-1/2" src={email} alt="email icon" />
+            <img
+              className="w-5 absolute left-4 top-1/2 -translate-y-1/2"
+              src={email}
+              alt="email icon"
+            />
             <input
               className="w-full h-14 bg-stone-500 text-white rounded-lg px-12 py-3 placeholder-white focus:outline-none"
               type="text"
               placeholder="Email"
-              onChange={""} name="" id=""
+              onChange={""}
+              name=""
+              id=""
             />
           </div>
           <div className="relative">
-            <img className="w-4 absolute left-4 top-1/2 -translate-y-1/2" src={password} alt="password icon" />
+            <img
+              className="w-4 absolute left-4 top-1/2 -translate-y-1/2"
+              src={password}
+              alt="password icon"
+            />
             <input
               className="w-full h-14 bg-stone-500 text-white rounded-lg px-12 py-3 placeholder-white focus:outline-none"
               type={showPassword ? "text" : "password"}
               placeholder="Password"
-              onChange={""} name="" id=""
+              onChange={""}
+              name=""
+              id=""
             />
             <button
               type="button"
@@ -48,12 +60,18 @@ function Login() {
             </button>
           </div>
           <div className="relative">
-            <img className="w-4 absolute left-4 top-1/2 -translate-y-1/2" src={password} alt="password icon" />
+            <img
+              className="w-4 absolute left-4 top-1/2 -translate-y-1/2"
+              src={password}
+              alt="password icon"
+            />
             <input
               className="w-full h-14 bg-stone-500 text-white rounded-lg px-12 py-3 placeholder-white focus:outline-none"
               type={showConfirmPassword ? "text" : "password"}
               placeholder="Confirm Password"
-              onChange={""} name="" id=""
+              onChange={""}
+              name=""
+              id=""
               onFocus={() => setShowPassword(false)}
             />
             <button

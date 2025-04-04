@@ -5,6 +5,9 @@ import Login from "../components/Login";
 import SplashScreen from "../pages/SplashScreen";
 import Emailverification from "../components/Emailverification";
 import Register from "../components/Register";
+import FillYourProfile from "../pages/FillYourProfile";
+import Forgotpassword from "../components/forgotpassword";
+import Newpassword from "../components/newpassword";
 
 const router = createBrowserRouter([
   {
@@ -15,9 +18,9 @@ const router = createBrowserRouter([
     path: "/about",
     element: <About />,
   },
-  {  
+  {
     path: "/login",
-    element: <Login />
+    element: <Login />,
   },
   {
     path: "/splash",
@@ -29,7 +32,19 @@ const router = createBrowserRouter([
   },
   {
     path: "/register",
-    element: <Register/>
+    element: <Register />,
+  },
+  {
+    path: "/fill-profile",
+    element: <FillYourProfile />,
+  },
+  {
+    path: "/frgtpassword",
+    element: <Forgotpassword/>
+  },
+  {
+    path:"/newpassword",
+    element:<Newpassword/>
   }
 ]);
 
