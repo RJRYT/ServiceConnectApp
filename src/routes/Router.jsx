@@ -5,6 +5,9 @@ import Login from "../components/Login";
 import SplashScreen from "../pages/SplashScreen";
 import Emailverification from "../components/Emailverification";
 import Register from "../components/Register";
+import FillYourProfile from "../pages/FillYourProfile";
+import Forgotpassword from "../components/forgotpassword";
+import Newpassword from "../components/newpassword";
 import Congratulationmodal from "../components/modal/Congratulationmodal";
 import Congratulationmodall from "../components/modal/Congratulations";
 import Allcategory from "../pages/allcategory";
@@ -18,9 +21,9 @@ const router = createBrowserRouter([
     path: "/about",
     element: <About />,
   },
-  {  
+  {
     path: "/login",
-    element: <Login />
+    element: <Login />,
   },
   {
     path: "/splash",
@@ -32,7 +35,19 @@ const router = createBrowserRouter([
   },
   {
     path: "/register",
-    element: <Register/>
+    element: <Register />,
+  },
+  {
+    path: "/fill-profile",
+    element: <FillYourProfile />,
+  },
+  {
+    path: "/frgtpassword",
+    element: <Forgotpassword />,
+  },
+  {
+    path: "/newpassword",
+    element: <Newpassword />,
   },
   {
     path: "/congratulationmodall",
@@ -45,7 +60,7 @@ const router = createBrowserRouter([
   {
     path: "/allcategory",
     element: <Allcategory/>
-  }
+  },
 ]);
 
 export default function Router() {
