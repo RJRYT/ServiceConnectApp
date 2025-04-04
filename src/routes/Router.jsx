@@ -7,6 +7,7 @@ import Emailverification from "../components/Emailverification";
 import Register from "../components/Register";
 import Congratulationmodal from "../components/modal/Congratulationmodal";
 import Congratulationmodall from "../components/modal/Congratulations";
+import Allcategory from "../pages/allcategory";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
   {
     path: "/congratulationmodal",
     element: <Congratulationmodal/>
+  },
+  {
+    path: "/allcategory",
+    element: <Allcategory/>
   }
 ]);
 
