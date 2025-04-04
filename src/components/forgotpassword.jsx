@@ -1,43 +1,58 @@
-import React from 'react'
+import React from "react";
 import { IoIosArrowBack } from "react-icons/io";
 import email from "../assets/ICON.png";
-import phoneIcon from "../assets/phoneIcon.png"
+import phoneIcon from "../assets/phoneIcon.png";
 import arrow from "../assets/arrow.png";
 import round from "../assets/oval.png";
 import { IoMdArrowRoundForward } from "react-icons/io";
-import Header from './header';
-import Submitbutton from './submitbutton';
-
+import { IoCallOutline } from "react-icons/io5";
+import { TfiEmail } from "react-icons/tfi";
+import Header from "./header";
+import Submitbutton from "./submitbutton";
+import Input from "./Input";
 
 function Forgotpassword() {
   return (
-    <div className='w-full h-screen'>
-      <Header title="FORGOT PASSWORD"/>
-        <div className='px-7 pt-40 lg:pt-20 lg:px-[550px]'>
-            <p className='text-center  mb-9 mt-12'>Enter your regitered email or phone nunmber to recieve a OTP to reset your password</p>
-            <div className="relative shadow-sm mb-5">
-            <img className="w-5 absolute left-4 top-1/2 -translate-y-1/2" src={email} alt="email icon" />
-            <input
-              className="w-full bg-stone-500 text-white rounded-lg px-12 py-3 placeholder-white focus:outline-none"
-              type="text"
+    <div className="w-full h-screen">
+      <Header title="FORGOT PASSWORD" />
+      <div className="grid place-items-center h-screen">
+        <div className="flex flex-col justify-center items-center content-center">
+          <p className="text-center max-w-[360px] mb-9">
+            Enter your regitered email or phone nunmber to recieve a OTP to
+            reset your password
+          </p>
+          <div className="flex flex-col gap-3 mb-5">
+            <Input
+              type="email"
               placeholder="Email"
-              onChange={""} name="" id=""
+              className="min-w-[360px]"
+              icon={
+                <TfiEmail
+                  className="absolute left-4 top-5 z-10"
+                  size={25}
+                  color="white"
+                />
+              }
             />
-          </div>
-          <div className="relative shadow-sm mb-5 lg:mb-15">
-            <img className="w-5 absolute left-4 top-1/2 -translate-y-1/2" src={phoneIcon} alt="email icon" />
-            <input
-              className="w-full bg-stone-500 text-white rounded-lg px-12 py-3 placeholder-white focus:outline-none"
-              type="text"
+            <Input
+              type="number"
               placeholder="Phone Number"
-              onChange={""} name="" id=""
+              className="min-w-[360px]"
+              icon={
+                <IoCallOutline
+                  className="absolute left-4 top-5 z-10"
+                  size={25}
+                  color="white"
+                />
+              }
             />
           </div>
-          <Submitbutton title="Continue"/>
+
+          <Submitbutton title="Continue" />
         </div>
-      
+      </div>
     </div>
-  )
+  );
 }
 
-export default Forgotpassword
+export default Forgotpassword;

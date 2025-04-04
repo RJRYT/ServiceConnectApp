@@ -8,8 +8,6 @@ import Register from "../components/Register";
 import FillYourProfile from "../pages/FillYourProfile";
 import Forgotpassword from "../components/forgotpassword";
 import Newpassword from "../components/newpassword";
-import Header from "../components/header";
-import Submitbutton from "../components/submitbutton";
 
 const router = createBrowserRouter([
   {
@@ -42,11 +40,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/frgtpassword",
-    element: <Forgotpassword/>
+    element: <Forgotpassword />,
   },
   {
-    path:"/newpassword",
-    element:<Newpassword/>
+    path: "/newpassword",
+    element: <Newpassword />,
   },
 ]);
 
