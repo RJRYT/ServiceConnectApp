@@ -8,6 +8,7 @@ import Register from "../components/Register";
 import FillYourProfile from "../pages/FillYourProfile";
 import Forgotpassword from "../components/forgotpassword";
 import Newpassword from "../components/newpassword";
+import Search from "../components/Search";
 
 const router = createBrowserRouter([
   {
@@ -45,6 +46,10 @@ const router = createBrowserRouter([
   {
     path:"/newpassword",
     element:<Newpassword/>
+  },
+  {
+    path:"/search",
+    element:<Search/>
   }
 ]);
 
