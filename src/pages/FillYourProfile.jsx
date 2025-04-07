@@ -7,6 +7,8 @@ import { FaCircleArrowRight } from "react-icons/fa6";
 import { FaRegEdit } from "react-icons/fa";
 import LocationPopup from "../components/LocationPopup";
 import Input from "../components/Input";
+import Header from "../components/header";
+import Submitbutton from "../components/submitbutton";
 
 function FillYourProfile() {
   const genderOptions = ["Male", "Female", "Others"];
@@ -40,14 +42,7 @@ function FillYourProfile() {
       </LocationPopup>
       <div className="flex flex-col min-h-screen bg-gray-300">
         {/* Header */}
-        <div className="w-full h-20 flex bg-[#1D1F2A] items-center space-x-3">
-          <div className="rounded-full bg-[#1D1F2A] w-10 h-10 flex justify-center items-center text-white text-xl font-bold border border-white ml-2">
-            <SlArrowLeft />
-          </div>
-          <p className="w-[50dvh] text-white text-xl font-semibold font-sans uppercase">
-            Fill your profile
-          </p>
-        </div>
+        <Header title="FILL YOUR PROFILE" />
 
         <div className="flex flex-col items-center justify-center px-2 sm:px-6">
           {/* pfp */}
@@ -116,10 +111,7 @@ function FillYourProfile() {
           </div>
 
           {/* Continue Button */}
-          <button className="text-white w-[300px] bg-[#1D1F2A] py-4 rounded-full cursor-pointer relative flex gap-4 justify-center font-bold my-10 active:bg-[#32364f]">
-            Continue
-            <FaCircleArrowRight className="absolute top-2 right-2" size={38} />
-          </button>
+          <Submitbutton title="Continue" />
         </div>
       </div>
     </>

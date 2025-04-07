@@ -1,27 +1,34 @@
-import React, { useState } from "react";
+import React from "react";
 import topimg from "../assets/ICON (2).png";
-import email from "../assets/ICON.png";
-import password from "../assets/ICON (1).png";
-import arrow from "../assets/arrow.png";
-import Oval from "../assets/Oval (2).png"
-import socialmedia from "../assets/Social Media.png"
+import Input from "../components/Input";
+import Submitbutton from "../components/submitbutton";
 import { FcGoogle } from "react-icons/fc";
-import { FaRegEye } from "react-icons/fa6";
-import { FaRegEyeSlash } from "react-icons/fa6";
+import { TfiEmail } from "react-icons/tfi";
+import { MdLockOutline } from "react-icons/md";
 
-function Login() {
-  const [showPassword, setShowPassword] = useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-
+function Register() {
   return (
-    <div className="h-screen  w-full bg-gray-300 flex justify-center items-center py-3">
-      <div className="w-full max-w-md bg-gray-300 p-8  rounded-xl flex flex-col items-center">
-        <div className="flex items-center gap-3 mb-4">
-          <img className="w-16" src={topimg} alt="Login Logo" />
-          <h5 className="text-2xl font-bold mb-5">Service Connect</h5>
+    <div className="min-h-screen w-full  bg-gray-300 px-5">
+      <div className="flex justify-center pt-15">
+        <img src={topimg} className="w-23" alt="" />
+        <h1 className="pt-5 text-2xl font-semibold ml-2">Service Connect</h1>
+      </div>
+
+      <div className="py-1 flex flex-col justify-center items-center gap-2">
+        <div>
+          <h1 className="font-semibold text-xl my-3 lg:my-1 lg:text-2xl mr-42 sm:mr-48 lg:mr-42">
+            Getting Started...!
+          </h1>
         </div>
-        <h3 className="text-2xl mb-6 font-bold flex mr-22 lg:mr-47">Getting Started..!</h3>
+<<<<<<<<< Temporary merge branch 1
+        <h3 className="text-slate-800 text-2xl mb-6 font-semibold flex mr-22 lg:mr-47">Getting Started..!</h3>
         
+=========
+        <h3 className="text-2xl mb-6 font-bold flex mr-22 lg:mr-47">
+          Getting Started..!
+        </h3>
+
+>>>>>>>>> Temporary merge branch 2
         <div className="w-full flex flex-col gap-5 relative">
           <div className="relative shadow-sm">
             <img
@@ -29,42 +36,29 @@ function Login() {
               src={email}
               alt="email icon"
             />
-            <input
-              className="w-full h-14 bg-stone-500 text-white rounded-lg px-12 py-3 placeholder-white focus:outline-none"
-              type="text"
-              placeholder="Email"
-              onChange={""}
-              name=""
-              id=""
+          }
+          className="min-w-[360px]"
+          type="text"
+          placeholder="Email"
+        />
+        <Input
+          icon={
+            <MdLockOutline
+              className="absolute left-4 top-5 z-10"
+              size={25}
+              color="white"
             />
-          </div>
-          <div className="relative">
-            <img
-              className="w-4 absolute left-4 top-1/2 -translate-y-1/2"
-              src={password}
-              alt="password icon"
-            />
-            <input
-              className="w-full h-14 bg-stone-500 text-white rounded-lg px-12 py-3 placeholder-white focus:outline-none"
-              type={showPassword ? "text" : "password"}
-              placeholder="Password"
-              onChange={""}
-              name=""
-              id=""
-            />
-            <button
-              type="button"
-              onClick={() => setShowPassword(!showPassword)}
-              className="absolute right-4 top-1/2 -translate-y-1/2 text-white"
-            >
-              {showPassword ? <FaRegEyeSlash /> : <FaRegEye />}
-            </button>
-          </div>
-          <div className="relative">
-            <img
-              className="w-4 absolute left-4 top-1/2 -translate-y-1/2"
-              src={password}
-              alt="password icon"
+          }
+          className="min-w-[360px]"
+          type="password"
+          placeholder="Password"
+        />
+        <Input
+          icon={
+            <MdLockOutline
+              className="absolute left-4 top-5 z-10"
+              size={25}
+              color="white"
             />
             <input
               className="w-full h-14 bg-stone-500 text-white rounded-lg px-12 py-3 placeholder-white focus:outline-none"
@@ -98,12 +92,24 @@ function Login() {
           </button>
           <p className="text-center mt-1">Or Continue With</p>
           <div className="flex justify-center mt-1 cursor-pointer">
-            <div className="bg-gray-400 w-12 h-12 flex justify-center items-center rounded-4xl text-2xl"> 
+<<<<<<<<< Temporary merge branch 1
+            <div className="mr-26 cursor-pointer"> 
+               <img className="ml-27 w-40" src={socialmedia}/>
+            </div>
+          </div>
+          <p className="text-center">
+            Don’t have an Account? <a className="underline font-bold hover:text-gray-400" href="#">SIGN IN</a>
+=========
+            <div className="bg-gray-400 w-12 h-12 flex justify-center items-center rounded-4xl text-2xl">
               <FcGoogle />
             </div>
           </div>
           <p className="text-center">
-            Don’t have an Account? <a className="underline font-bold hover:text-gray-400" href="#">SIGN UP</a>
+            Don’t have an Account?{" "}
+            <a className="underline font-bold hover:text-gray-400" href="#">
+              SIGN UP
+            </a>
+>>>>>>>>> Temporary merge branch 2
           </p>
         </div>
       </div>
@@ -111,4 +117,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Register;
