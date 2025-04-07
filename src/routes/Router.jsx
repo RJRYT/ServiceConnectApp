@@ -6,6 +6,7 @@ import Register from "../components/Register";
 import FillYourProfile from "../pages/FillYourProfile";
 import Forgotpassword from "../components/forgotpassword";
 import Newpassword from "../components/newpassword";
+import Search from "../components/Search";
 import Congratulationmodal from "../components/modal/Congratulationmodal";
 import Congratulationmodall from "../components/modal/Congratulations";
 import Allcategory from "../pages/allcategory";
@@ -55,6 +56,10 @@ const router = createBrowserRouter([
   {
     path: "/delivery_services",
     element: <DeliveryServices />,
+  },
+  {
+    path:"/search",
+    element:<Search/>
   },
 ]);
 
