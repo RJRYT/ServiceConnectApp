@@ -10,6 +10,7 @@ import Search from "../components/Search";
 import Congratulationmodal from "../components/modal/Congratulationmodal";
 import Congratulationmodall from "../components/modal/Congratulations";
 import Allcategory from "../pages/allcategory";
+import DeliveryServices from "../pages/DeliveryServices";
 
 const router = createBrowserRouter([
   {
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
   {
     path: "/allcategory",
     element: <Allcategory />,
+  },
+  {
+    path: "/delivery_services",
+    element: <DeliveryServices />,
   },
   {
     path:"/search",
