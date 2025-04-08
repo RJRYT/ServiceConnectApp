@@ -9,6 +9,7 @@ import Newpassword from "../components/newpassword";
 import Congratulationmodal from "../components/modal/Congratulationmodal";
 import Congratulationmodall from "../components/modal/Congratulations";
 import Allcategory from "../pages/allcategory";
+import Test from "../components/test";
 
 const router = createBrowserRouter([
   {
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
     path: "/allcategory",
     element: <Allcategory />,
   },
+  {
+    path: "test",
+    element: <Test/>
+  }
 ]);
 
 export default function Router() {
