@@ -53,7 +53,7 @@ const router = createBrowserRouter([
     element: <Allcategory />,
   },
   {
-    path: "test",
+    path: "filtertest",
     element: <Test/>
   }
 ]);

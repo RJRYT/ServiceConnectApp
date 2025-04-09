@@ -9,8 +9,6 @@ import Filter from './filter';
 
 function Mainheader({ title }) {
   const [isFilterOpen, setIsFilterOpen] = useState(false);
-  const isMobile = useIsMobile();
-  const isDesktop = useIsDesktop();
 
   const handleFilterClick = () => {
     setIsFilterOpen(true);
@@ -18,6 +16,14 @@ function Mainheader({ title }) {
 
   const closeFilter = () => {
     setIsFilterOpen(false);
+  };
+
+  //placeholder ---  Pass in this filter options whem calling
+  const filterOptions = {
+    "SubCategories": ["Design", "Development", "Marketing", "Business", "AI & Data Science"],
+    "Price": ["Free", "Paid"],
+    "Rating": ["4.5 & Up Above", "4.0 & Up Above", "3.5 & Up Above", "3.0 & Up Above"],
+    "Duration": ["0-2 Hours", "3-6 Hours", "7-16 Hours", "17+"]
   };
 
   return (
@@ -44,7 +50,7 @@ function Mainheader({ title }) {
 
       {isFilterOpen && (
         <FilterWrapper onClose={closeFilter}>
-          <Filter closeFilter={closeFilter} />
+          <Filter closeFilter={closeFilter} filterOptions={filterOptions} />
         </FilterWrapper>
       )}
     </>
