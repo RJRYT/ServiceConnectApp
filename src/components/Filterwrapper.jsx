@@ -14,7 +14,7 @@ function FilterWrapper({ children, onClose }) {
       <div
         className={`${
           isDesktop
-            ? 'bg-gray-200 rounded-2xl shadow-xl p-6 w-full max-w-4xl mx-4 max-h-[90vh] overflow-y-auto'
+            ? 'bg-gray-200 rounded-2xl shadow-xl w-full max-w-4xl mx-4 max-h-[90vh] overflow-y-auto'
             : 'w-full h-full overflow-y-auto'
         }`}
         onClick={(e) => e.stopPropagation()}

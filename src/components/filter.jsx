@@ -17,7 +17,7 @@ function Filter({ closeFilter, filterOptions = {} }) {
 
   return (
     <div className='bg-gray-200 lg:rounded-2xl'>
-      <div className='flex justify-between h-[80px] items-center px-3'>
+      <div className='flex justify-between items-center px-3'>
         <div className='flex items-center gap-1 cursor-pointer' onClick={closeFilter}>
           <IoIosArrowRoundBack className='text-6xl' />
           <h1 className='text-2xl font-bold'>FILTER</h1>
