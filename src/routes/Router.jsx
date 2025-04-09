@@ -11,6 +11,7 @@ import Congratulationmodal from "../components/modal/Congratulationmodal";
 import Congratulationmodall from "../components/modal/Congratulations";
 import Allcategory from "../pages/allcategory";
 import DeliveryServices from "../pages/DeliveryServices";
+import Test from "../components/test";
 
 const router = createBrowserRouter([
   {
@@ -61,6 +62,10 @@ const router = createBrowserRouter([
     path:"/search",
     element:<Search/>
   },
+  {
+    path: "filtertest",
+    element: <Test/>
+  }
 ]);
 
 export default function Router() {
