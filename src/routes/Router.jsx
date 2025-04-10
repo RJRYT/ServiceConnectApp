@@ -11,7 +11,9 @@ import Congratulationmodal from "../components/modal/Congratulationmodal";
 import Congratulationmodall from "../components/modal/Congratulations";
 import Allcategory from "../pages/allcategory";
 import DeliveryServices from "../pages/DeliveryServices";
+import Home from "../pages/Home";
 import Test from "../components/test";
+import DashBoard from "../layouts/DashBoard";
 
 const router = createBrowserRouter([
   {
@@ -59,13 +61,23 @@ const router = createBrowserRouter([
     element: <DeliveryServices />,
   },
   {
-    path:"/search",
-    element:<Search/>
+    path: "/search",
+    element: <Search />,
+  },
+  {
+    path: "/home",
+    element: <DashBoard />,
+    children: [
+      {
+        index: true,
+        element: <Home />,
+      }
+    ],
   },
   {
     path: "filtertest",
-    element: <Test/>
-  }
+    element: <Test />,
+  },
 ]);
 
 export default function Router() {
