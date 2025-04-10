@@ -13,6 +13,7 @@ import Allcategory from "../pages/allcategory";
 import DeliveryServices from "../pages/DeliveryServices";
 import Home from "../pages/Home";
 import Test from "../components/test";
+import DashBoard from "../layouts/DashBoard";
 
 const router = createBrowserRouter([
   {
@@ -65,12 +66,18 @@ const router = createBrowserRouter([
   },
   {
     path: "/home",
-    element: <Home />,
+    element: <DashBoard />,
+    children: [
+      {
+        index: true,
+        element: <Home />,
+      }
+    ],
   },
   {
     path: "filtertest",
-    element: <Test/>
-  }
+    element: <Test />,
+  },
 ]);
 
 export default function Router() {
