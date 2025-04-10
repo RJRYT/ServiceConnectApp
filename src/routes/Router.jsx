@@ -11,6 +11,7 @@ import Congratulationmodal from "../components/modal/Congratulationmodal";
 import Congratulationmodall from "../components/modal/Congratulations";
 import Allcategory from "../pages/allcategory";
 import DeliveryServices from "../pages/DeliveryServices";
+import Home from "../pages/Home";
 
 const router = createBrowserRouter([
   {
@@ -58,8 +59,12 @@ const router = createBrowserRouter([
     element: <DeliveryServices />,
   },
   {
-    path:"/search",
-    element:<Search/>
+    path: "/search",
+    element: <Search />,
+  },
+  {
+    path: "/home",
+    element: <Home />,
   },
 ]);
 
