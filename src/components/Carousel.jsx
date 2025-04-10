@@ -2,13 +2,9 @@ import { useState, useEffect } from "react";
 import { FaChevronLeft } from "react-icons/fa";
 import { FaChevronRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import bg from "../assets/bg6.jpg";
 
-const images = [
-  "https://source.unsplash.com/random/800x400?nature",
-  "https://source.unsplash.com/random/800x400?water",
-  "https://source.unsplash.com/random/800x400?forest",
-  "https://source.unsplash.com/random/800x400?city",
-];
+const images = [bg, bg, bg, bg];
 
 const ImageCarousel = () => {
   const [current, setCurrent] = useState(0);
@@ -72,7 +68,7 @@ const ImageCarousel = () => {
       </button> */}
 
       {/* Dots */}
-      <div className="absolute transition-all bottom-2 left-1/2 transform -translate-x-1/2 flex gap-2">
+      <div className="absolute cursor-pointer transition-all bottom-2 left-1/2 transform -translate-x-1/2 flex gap-2">
         {images.map((_, index) => (
           <div
             key={index}

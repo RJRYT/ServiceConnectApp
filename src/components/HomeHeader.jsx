@@ -78,7 +78,7 @@ function HomeHeader() {
 
       {/* Sidebar for Mobile */}
       <div
-        className={`fixed top-1/2 left-1/2 h-auto z-50 w-76 bg-black/80 backdrop-blur-sm text-white rounded-xl shadow-lg transform -translate-x-1/2 -translate-y-1/2 transition-all duration-300 ease-in-out ${
+        className={`fixed top-1/2 right-0 h-auto z-50 w-76 bg-black/80 backdrop-blur-sm text-white rounded-xl shadow-lg transform -translate-y-1/2 transition-all duration-300 ease-in-out ${
           isSidebarOpen
             ? "opacity-100 scale-100 pointer-events-auto"
             : "opacity-0 scale-95 pointer-events-none"
