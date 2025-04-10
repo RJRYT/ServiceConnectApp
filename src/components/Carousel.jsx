@@ -29,7 +29,7 @@ const ImageCarousel = () => {
 
   return (
     <div className="relative w-full max-w-4xl mx-auto overflow-hidden rounded-xl">
-      <div className="w-full h-full z-50 absolute  flex  items-center justify-between text-white font-mulish p-4 md:p-10">
+      <div className="w-full h-full z-10 absolute  flex  items-center justify-between text-white font-mulish p-4 md:p-10">
         <div className="flex flex-col gap-2">
           <h3 className="font-bold text-sm">25% OFF*</h3>
           <h2 className=" font-bold text-2xl">Today's Special</h2>
