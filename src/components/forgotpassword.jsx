@@ -3,7 +3,7 @@ import { IoIosArrowBack } from "react-icons/io";
 import email from "../assets/ICON.png";
 import phoneIcon from "../assets/phoneIcon.png";
 import arrow from "../assets/arrow.png";
-import round from "../assets/oval.png";
+import round from "../assets/Oval.png";
 import { IoMdArrowRoundForward } from "react-icons/io";
 import { IoCallOutline } from "react-icons/io5";
 import { TfiEmail } from "react-icons/tfi";

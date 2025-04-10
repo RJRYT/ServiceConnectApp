@@ -5,7 +5,7 @@ import { BiBookBookmark } from "react-icons/bi";
 import { HiMiniQuestionMarkCircle } from "react-icons/hi2";
 import timer from "../assets/timer.png";
 import booklist from "../assets/booklist.png";
-import vector from "../assets/vectorr.png";
+import vector from "../assets/Vectorr.png";
 
 function Footermenu() {
   return (

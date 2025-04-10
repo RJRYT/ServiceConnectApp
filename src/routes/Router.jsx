@@ -12,6 +12,7 @@ import Congratulationmodall from "../components/modal/Congratulations";
 import Allcategory from "../pages/allcategory";
 import DeliveryServices from "../pages/DeliveryServices";
 import Home from "../pages/Home";
+import Test from "../components/test";
 
 const router = createBrowserRouter([
   {
@@ -66,6 +67,10 @@ const router = createBrowserRouter([
     path: "/home",
     element: <Home />,
   },
+  {
+    path: "filtertest",
+    element: <Test/>
+  }
 ]);
 
 export default function Router() {
