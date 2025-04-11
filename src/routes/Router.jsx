@@ -8,7 +8,8 @@ import Forgotpassword from "../components/forgotpassword";
 import Newpassword from "../components/newpassword";
 import Congratulationmodal from "../components/modal/Congratulationmodal";
 import Congratulationmodall from "../components/modal/Congratulations";
-import Allcategory from "../pages/allcategory";
+import Delivery from "../pages/cakedelivery";
+import Nearby from "../components/nearby";
 
 const router = createBrowserRouter([
   {
@@ -48,9 +49,9 @@ const router = createBrowserRouter([
     element: <Congratulationmodal />,
   },
   {
-    path: "/allcategory",
-    element: <Allcategory />,
-  },
+    path: "/cakedelivery",
+    element: <Delivery />,
+  }
 ]);
 
 export default function Router() {

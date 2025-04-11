@@ -7,7 +7,7 @@ import { BiSearchAlt } from "react-icons/bi";
 function Mainheader({title}) {
   return (
     <div>
-      <div className='bg-slate-900 w-full  h-[80px] flex justify-between items-center px-2 lg:px-8'>
+      <div className='bg-slate-900 w-full   h-[80px] flex justify-between items-center px-2 lg:px-8'>
             <div className=' flex items-center lg:gap-4 gap-2'>
             <div className='border-2 border-white w-13 h-13 rounded-full flex justify-center items-center pr-1'>
             <IoIosArrowBack className='text-white text-4xl' />
