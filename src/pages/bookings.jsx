@@ -14,8 +14,8 @@ function Bookings() {
       <div className='lg:flex flex-wrap'>
 
         <div className='flex px-5 my-2 rounded-2xl items-stretch'>
-          <div className='bg-black px-3 rounded-l-3xl flex items-stretch'>
-            <div className='w-3'></div>
+          <div className='bg-black px-2 rounded-l-3xl flex items-stretch'>
+            <div className='w-2'></div>
           </div>
           <div className='py-4 px-4 rounded-r-3xl bg-white flex-1'>
             <div className='flex justify-between w-full items-center'>
@@ -49,8 +49,8 @@ function Bookings() {
         </div>
 
         <div className='flex px-5 my-2 rounded-2xl items-stretch'>
-          <div className='bg-green-500 px-3 rounded-l-3xl flex items-stretch'>
-            <div className='w-3'></div>
+          <div className='bg-green-500 px-2 rounded-l-3xl flex items-stretch'>
+            <div className='w-2'></div>
           </div>
           <div className='py-4 px-4 rounded-r-3xl bg-white flex-1'>
             <div className='bg-black w-10'></div>
