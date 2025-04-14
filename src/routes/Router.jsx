@@ -14,7 +14,7 @@ import DeliveryServices from "../pages/DeliveryServices";
 import Home from "../pages/Home";
 import Test from "../components/test";
 import DashBoard from "../layouts/DashBoard";
-import Nearby from "../components/nearby";
+import Bookings from "../pages/bookings";
 
 const router = createBrowserRouter([
   {
@@ -79,6 +79,10 @@ const router = createBrowserRouter([
     path: "filtertest",
     element: <Test />,
   },
+  {
+    path: "bookings",
+    element: <Bookings/>
+  }
 ]);
 
 export default function Router() {
