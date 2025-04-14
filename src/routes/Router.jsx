@@ -9,7 +9,7 @@ import Newpassword from "../components/newpassword";
 import Search from "../components/Search";
 import Congratulationmodal from "../components/modal/Congratulationmodal";
 import Congratulationmodall from "../components/modal/Congratulations";
-import Allcategory from "../pages/allcategory";
+import Delivery from "../pages/cakedelivery";
 import DeliveryServices from "../pages/DeliveryServices";
 import Home from "../pages/Home";
 import Test from "../components/test";
@@ -54,8 +54,8 @@ const router = createBrowserRouter([
     element: <Congratulationmodal />,
   },
   {
-    path: "/allcategory",
-    element: <Allcategory />,
+    path: "/cakedelivery",
+    element: <Delivery />,
   },
   {
     path: "/delivery_services",
