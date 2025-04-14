@@ -15,6 +15,7 @@ import Home from "../pages/Home";
 import Test from "../components/test";
 import DashBoard from "../layouts/DashBoard";
 import Bookings from "../pages/bookings";
+import Allcategory from "../pages/allcategory";
 
 const router = createBrowserRouter([
   {
@@ -62,6 +63,10 @@ const router = createBrowserRouter([
     element: <DeliveryServices />,
   },
   {
+    path: "/allcategory",
+    element: <Allcategory />,
+  },
+  {
     path: "/search",
     element: <Search />,
   },
@@ -72,7 +77,7 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Home />,
-      }
+      },
     ],
   },
   {
@@ -81,8 +86,8 @@ const router = createBrowserRouter([
   },
   {
     path: "bookings",
-    element: <Bookings/>
-  }
+    element: <Bookings />,
+  },
 ]);
 
 export default function Router() {
