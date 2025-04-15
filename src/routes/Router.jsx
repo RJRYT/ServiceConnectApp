@@ -14,7 +14,7 @@ import DeliveryServices from "../pages/DeliveryServices";
 import Home from "../pages/Home";
 import Test from "../components/test";
 import DashBoard from "../layouts/DashBoard";
-import Bookings from "../pages/bookings";
+import Bookings from "../pages/BookingsList";
 import Allcategory from "../pages/allcategory";
 import BookingServices from "../pages/BookingServices";
 
