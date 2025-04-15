@@ -14,6 +14,7 @@ import DeliveryServices from "../pages/DeliveryServices";
 import Home from "../pages/Home";
 import Test from "../components/test";
 import DashBoard from "../layouts/DashBoard";
+import Bookings from "../pages/Bookings";
 
 const router = createBrowserRouter([
   {
@@ -71,12 +72,17 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Home />,
-      }
+      },
     ],
   },
   {
     path: "filtertest",
     element: <Test />,
+  },
+
+  {
+    path: "/booking-details",
+    element: <Bookings />,
   },
 ]);
 
