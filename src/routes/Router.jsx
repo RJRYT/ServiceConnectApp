@@ -9,12 +9,14 @@ import Newpassword from "../components/newpassword";
 import Search from "../components/Search";
 import Congratulationmodal from "../components/modal/Congratulationmodal";
 import Congratulationmodall from "../components/modal/Congratulations";
-import Allcategory from "../pages/allcategory";
+import Delivery from "../pages/cakedelivery";
 import DeliveryServices from "../pages/DeliveryServices";
 import Home from "../pages/Home";
 import Test from "../components/test";
 import DashBoard from "../layouts/DashBoard";
-import Bookings from "../pages/Bookings";
+import Bookings from "../pages/bookings";
+import Allcategory from "../pages/allcategory";
+import BookingServices from "../pages/Bookings";
 
 const router = createBrowserRouter([
   {
@@ -54,12 +56,16 @@ const router = createBrowserRouter([
     element: <Congratulationmodal />,
   },
   {
-    path: "/allcategory",
-    element: <Allcategory />,
+    path: "/cakedelivery",
+    element: <Delivery />,
   },
   {
     path: "/delivery_services",
     element: <DeliveryServices />,
+  },
+  {
+    path: "/allcategory",
+    element: <Allcategory />,
   },
   {
     path: "/search",
@@ -79,10 +85,14 @@ const router = createBrowserRouter([
     path: "filtertest",
     element: <Test />,
   },
+  {
+    path: "bookings",
+    element: <Bookings />,
+  },
 
   {
     path: "/booking-details",
-    element: <Bookings />,
+    element: <BookingServices />,
   },
 ]);
 
