@@ -16,7 +16,7 @@ import Test from "../components/test";
 import DashBoard from "../layouts/DashBoard";
 import Bookings from "../pages/bookings";
 import Allcategory from "../pages/allcategory";
-import BookingServices from "../pages/Bookings";
+import BookingServices from "../pages/BookingServices";
 
 const router = createBrowserRouter([
   {
