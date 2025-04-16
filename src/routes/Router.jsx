@@ -18,6 +18,8 @@ import DashBoard from "../layouts/DashBoard";
 import Bookings from "../pages/BookingsList";
 import Allcategory from "../pages/allcategory";
 import BookingServices from "../pages/BookingServices";
+import PaymentMethod from "../pages/PaymentMethod";
+import PaymentType from "../pages/PaymentType";
 
 const router = createBrowserRouter([
   {
@@ -99,6 +101,14 @@ const router = createBrowserRouter([
     path: "/providerprofile",
     element: <ProviderProfile />,
   },
+  {
+    path:"paymentmethod",
+    element:<PaymentMethod/>
+  },
+  {
+    path:"paymenttype",
+    element:<PaymentType/>
+  }
 ]);
 
 export default function Router() {
