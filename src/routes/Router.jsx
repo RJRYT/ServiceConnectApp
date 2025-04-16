@@ -16,6 +16,7 @@ import Test from "../components/test";
 import DashBoard from "../layouts/DashBoard";
 import Bookings from "../pages/bookings";
 import Allcategory from "../pages/allcategory";
+import Erecipt from "../pages/Erecipt";
 
 const router = createBrowserRouter([
   {
@@ -88,6 +89,10 @@ const router = createBrowserRouter([
     path: "bookings",
     element: <Bookings />,
   },
+  {
+    path: "Recipt",
+    element: <Erecipt/>
+  }
 ]);
 
 export default function Router() {
