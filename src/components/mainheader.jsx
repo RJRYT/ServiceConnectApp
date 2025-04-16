@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import { IoIosArrowBack } from "react-icons/io";
 import { VscSettings } from "react-icons/vsc";
 import { BiSearchAlt } from "react-icons/bi";
-import useIsMobile from '../utils/useIsmobile';
-import useIsDesktop from '../utils/useIsDesktop';
 import FilterWrapper from './Filterwrapper';
 import Filter from './filter';
 

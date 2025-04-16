@@ -9,11 +9,15 @@ import Newpassword from "../components/newpassword";
 import Search from "../components/Search";
 import Congratulationmodal from "../components/modal/Congratulationmodal";
 import Congratulationmodall from "../components/modal/Congratulations";
-import Allcategory from "../pages/allcategory";
+import Delivery from "../pages/cakedelivery";
 import DeliveryServices from "../pages/DeliveryServices";
+import ProviderProfile from "../pages/ProvideerProfile";
 import Home from "../pages/Home";
 import Test from "../components/test";
 import DashBoard from "../layouts/DashBoard";
+import Bookings from "../pages/BookingsList";
+import Allcategory from "../pages/allcategory";
+import BookingServices from "../pages/BookingServices";
 import PaymentMethod from "../pages/PaymentMethod";
 import PaymentType from "../pages/PaymentType";
 
@@ -55,12 +59,16 @@ const router = createBrowserRouter([
     element: <Congratulationmodal />,
   },
   {
-    path: "/allcategory",
-    element: <Allcategory />,
+    path: "/cakedelivery",
+    element: <Delivery />,
   },
   {
     path: "/delivery_services",
     element: <DeliveryServices />,
+  },
+  {
+    path: "/allcategory",
+    element: <Allcategory />,
   },
   {
     path: "/search",
@@ -73,12 +81,25 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Home />,
-      }
+      },
     ],
   },
   {
     path: "filtertest",
     element: <Test />,
+  },
+  {
+    path: "bookings",
+    element: <Bookings />,
+  },
+
+  {
+    path: "/booking-details",
+    element: <BookingServices />,
+  },
+  {
+    path: "/providerprofile",
+    element: <ProviderProfile />,
   },
   {
     path:"paymentmethod",
