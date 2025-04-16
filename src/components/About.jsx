@@ -10,8 +10,8 @@ const About = () => {
 
   return (
     <div className=' bg-white p-4 rounded-xl shadow-3xl relative'>
-        <img className='w-24 absolute sm:left-165  sm:bottom-28 left-72 bottom-80' src={headerimg} />
-        <img className='w-10 absolute sm:left-172 sm:bottom-37 left-79 bottom-89' src={Filll} />
+        <img className='w-24 absolute sm:left-165  sm:bottom-28 left-73 bottom-80' src={headerimg} />
+        <img className='w-10 absolute sm:left-172 sm:bottom-37 left-80 bottom-89' src={Filll} />
       <h2 className="font-semibold text-[#202244] ">About</h2>
       <p className="text-sm text-[#A0A4AB] font-semibold font-mulish">{isExpanded ?
         " Graphic Design now a popular profession graphic design by off your carrer about tantas regiones barbarorum pedibus obiit."

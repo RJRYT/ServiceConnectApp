@@ -9,7 +9,7 @@ const ProviderHeader = () => {
 
       <div class="flex justify-between items-center space-x-2  ">
         <span className="text-xs text-[#FF6B00] font-mulish"> 3 km away</span>
-        <div className="flex  justify-center items-center gap-1 ">
+        <div className="flex  justify-center items-center gap-1">
           <img className='w-4' src={star1} /><p className='font-Mulish font-semibold' >4.2 | 32 Reviews</p>
         </div>
 
