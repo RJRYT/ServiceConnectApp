@@ -9,7 +9,7 @@ import BookingImagesUpload from "../components/BookingImagesUpload";
 import { BsExclamationOctagon } from "react-icons/bs";
 import Availability from "../components/Availability";
 
-function Bookings() {
+function BookingServices() {
   const items = [
     { description: "Bulb", quantity: 2, price: 50 },
     { description: "Wiring", quantity: 1, price: 100 },
@@ -90,4 +90,4 @@ function Bookings() {
   );
 }
 
-export default Bookings;
+export default BookingServices;
