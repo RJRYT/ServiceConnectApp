@@ -14,6 +14,8 @@ import DeliveryServices from "../pages/DeliveryServices";
 import Home from "../pages/Home";
 import Test from "../components/test";
 import DashBoard from "../layouts/DashBoard";
+import PaymentMethod from "../pages/PaymentMethod";
+import PaymentType from "../pages/PaymentType";
 
 const router = createBrowserRouter([
   {
@@ -78,6 +80,14 @@ const router = createBrowserRouter([
     path: "filtertest",
     element: <Test />,
   },
+  {
+    path:"paymentmethod",
+    element:<PaymentMethod/>
+  },
+  {
+    path:"paymenttype",
+    element:<PaymentType/>
+  }
 ]);
 
 export default function Router() {
