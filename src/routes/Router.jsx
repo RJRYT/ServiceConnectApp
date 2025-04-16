@@ -11,6 +11,7 @@ import Congratulationmodal from "../components/modal/Congratulationmodal";
 import Congratulationmodall from "../components/modal/Congratulations";
 import Delivery from "../pages/cakedelivery";
 import DeliveryServices from "../pages/DeliveryServices";
+import ProviderProfile from "../pages/ProvideerProfile";
 import Home from "../pages/Home";
 import Test from "../components/test";
 import DashBoard from "../layouts/DashBoard";
@@ -93,6 +94,10 @@ const router = createBrowserRouter([
   {
     path: "/booking-details",
     element: <BookingServices />,
+  },
+  {
+    path: "/providerprofile",
+    element: <ProviderProfile />,
   },
 ]);
 
