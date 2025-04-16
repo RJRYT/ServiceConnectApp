@@ -20,6 +20,7 @@ import Allcategory from "../pages/allcategory";
 import BookingServices from "../pages/BookingServices";
 import PaymentMethod from "../pages/PaymentMethod";
 import PaymentType from "../pages/PaymentType";
+import Erecipt from "../pages/Erecipt";
 
 const router = createBrowserRouter([
   {
@@ -92,7 +93,6 @@ const router = createBrowserRouter([
     path: "bookings",
     element: <Bookings />,
   },
-
   {
     path: "/booking-details",
     element: <BookingServices />,
@@ -108,6 +108,10 @@ const router = createBrowserRouter([
   {
     path:"paymenttype",
     element:<PaymentType/>
+  },
+  {
+    path: "Recipt",
+    element: <Erecipt/>
   }
 ]);
 
