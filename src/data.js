@@ -1,19 +1,20 @@
-import all from "./assets/all.png";
-import delivery from "./assets/delivery.png";
-import beauty from "./assets/beauty.png";
-import business from "./assets/business.png";
-import clean from "./assets/clean.png";
-import bouquet from "./assets/delivery_bouquet.png";
-import cake from "./assets/delivery_cake.png";
-import driver from "./assets/delivery_driver.png";
-import movers from "./assets/delivery_movers.png";
-import pickup from "./assets/delivery_pickup.png";
-import electronic from "./assets/electronic.png";
-import events from "./assets/events.png";
-import health from "./assets/health.png";
-import home from "./assets/home.png";
-import laundry from "./assets/laundry.png";
-import technology from "./assets/technology.png";
+import all from "./assets/all_category/all.png";
+import delivery from "./assets/all_category/delivery.png";
+import beauty from "./assets/all_category/beauty.png";
+import business from "./assets/all_category/business.png";
+import clean from "./assets/all_category/clean.png";
+import electronic from "./assets/all_category/electronic.png";
+import events from "./assets/all_category/events.png";
+import health from "./assets/all_category/health.png";
+import home from "./assets/all_category/home.png";
+import laundry from "./assets/all_category/laundry.png";
+import technology from "./assets/all_category/technology.png";
+
+import bouquet from "./assets/delivery/delivery_bouquet.png";
+import cake from "./assets/delivery/delivery_cake.png";
+import driver from "./assets/delivery/delivery_driver.png";
+import movers from "./assets/delivery/delivery_movers.png";
+import pickup from "./assets/delivery/delivery_pickup.png";
 
 export const allCategories = [
   {
