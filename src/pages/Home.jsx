@@ -6,6 +6,7 @@ import ServiceCard from "../components/ServiceCard";
 import Search from "../components/Search";
 import search from "../assets/search.png";
 import Filter from "../assets/FILTER.png";
+import NearBy from "../components/nearby";
 
 function Home() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -43,13 +44,8 @@ function Home() {
             alt="filter icon"
           />
         </div>
-        <div className="w-full grid grid-cols-3 rounded-2xl border-4 border-[#1D1F2A] bg-white">
-          <div className="flex items-center justify-center rounded-2xl bg-[#1D1F2A] text-white">
-            Near By
-          </div>
-          <div className="flex items-center justify-center">10 km</div>
-          <div className="flex items-center justify-center">All</div>
-        </div>
+        {/* nearby filter */}
+        <NearBy />
         {/* carousel */}
         <div className="my-4 rounded-2xl w-full bg-[#1D1F2A]">
           <ImageCarousel />
