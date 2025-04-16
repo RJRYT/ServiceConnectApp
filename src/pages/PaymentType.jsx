@@ -22,10 +22,10 @@ const PaymentType = () => {
       <div className="sm:flex flex-col justify-center items-center p-2">
 
 
-        <div className="bg-[#191a24] md:max-w-3xl sm:w-1/3 text-white rounded-3xl  p-5 mt-2 shadow-md">
+        <div className="bg-[#191a24] h-[36vh] md:max-w-3xl  sm:w-1/2 text-white rounded-3xl  p-8 mt-2 shadow-md">
           <img src={paymentcard} className='w-10 mb-5' />
-          <div className="text-xl tracking-widest font-semibold">1234 5678 8765 0876</div>
-          <div className="flex text-sm mt-2 gap-1">
+          <div className="text-xl tracking-widest font-semibold pt-5">1234 5678 8765 0876</div>
+          <div className="flex text-sm mt-3 gap-1">
             <div className="w-10 text-white">VALID THRU</div>
             <div className='mt-1 text-xl'>{cardDetails.expiry}</div>
           </div>
@@ -33,7 +33,7 @@ const PaymentType = () => {
         </div>
 
         {/* Form Fields */}
-        <div className="md:max-w-3xl mt-6 space-y-4 ">
+        <div className="sm:w-1/2 mt-6 space-y-4 ">
           <div>
             <label className="text-sm text-[#202244]  font-mulish  font-bold">Card Name*</label>
             <input
