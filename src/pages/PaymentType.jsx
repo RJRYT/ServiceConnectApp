@@ -14,7 +14,7 @@ const PaymentType = () => {
   });
   return (
 
-    <div className="min-h-screen  bg-gray-200  font-sans ">
+    <div className="min-h-screen  w-full bg-gray-300  font-sans ">
       {/* Header */}
       <Header title="ADD CARD" />
 
@@ -22,18 +22,18 @@ const PaymentType = () => {
       <div className="sm:flex flex-col justify-center items-center p-2">
 
 
-        <div className="bg-[#191a24] h-[36vh] md:max-w-3xl  sm:w-1/2 text-white rounded-3xl  p-8 mt-2 shadow-md">
+        <div className="bg-[#191a24] h-[31vh]  sm:w-1/2 text-white rounded-3xl  sm:p-5 p-4 shadow-md">
           <img src={paymentcard} className='w-10 mb-5' />
           <div className="text-xl tracking-widest font-semibold pt-5">1234 5678 8765 0876</div>
           <div className="flex text-sm mt-3 gap-1">
             <div className="w-10 text-white">VALID THRU</div>
             <div className='mt-1 text-xl'>{cardDetails.expiry}</div>
           </div>
-          <div className="mt-4 text-sm tracking-wider">{cardDetails.name.toUpperCase()}</div>
+          <div className="mt-2 text-sm tracking-wider">{cardDetails.name.toUpperCase()}</div>
         </div>
 
         {/* Form Fields */}
-        <div className="sm:w-1/2 mt-6 space-y-4 ">
+        <div className="sm:w-1/2 p-3 space-y-3 ">
           <div>
             <label className="text-sm text-[#202244]  font-mulish  font-bold">Card Name*</label>
             <input
