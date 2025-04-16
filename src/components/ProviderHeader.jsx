@@ -2,19 +2,15 @@ import React from 'react'
 import videos from "../assets/providerprofile/videos.png"
 import time from "../assets/providerprofile/time.png"
 import star1 from "../assets/providerprofile/star1.png"
-import headerimg from "../assets/providerprofile/headerimg.png"
-import Filll from "../assets/providerprofile/Filll.png"
 
 const ProviderHeader = () => {
   return (
     <div className='md:max-w-3x1 bg-white p-4 rounded-xl shadow-3xl'>
 
-      <div class="flex justify-between items-center space-x-2  relative">
+      <div class="flex justify-between items-center space-x-2  ">
         <span className="text-xs text-[#FF6B00] font-mulish"> 3 km away</span>
         <div className="flex  justify-center items-center gap-1 ">
           <img className='w-4' src={star1} /><p className='font-Mulish font-semibold' >4.2 | 32 Reviews</p>
-          <img className='absolute bottom-7' src={headerimg} />
-          <img className='w-10 absolute bottom-15' src={Filll} />
         </div>
 
       </div>
