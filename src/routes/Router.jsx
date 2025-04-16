@@ -11,11 +11,15 @@ import Congratulationmodal from "../components/modal/Congratulationmodal";
 import Congratulationmodall from "../components/modal/Congratulations";
 import Delivery from "../pages/cakedelivery";
 import DeliveryServices from "../pages/DeliveryServices";
+import ProviderProfile from "../pages/ProvideerProfile";
 import Home from "../pages/Home";
 import Test from "../components/test";
 import DashBoard from "../layouts/DashBoard";
-import Bookings from "../pages/bookings";
+import Bookings from "../pages/BookingsList";
 import Allcategory from "../pages/allcategory";
+import BookingServices from "../pages/BookingServices";
+import PaymentMethod from "../pages/PaymentMethod";
+import PaymentType from "../pages/PaymentType";
 import Erecipt from "../pages/Erecipt";
 
 const router = createBrowserRouter([
@@ -88,6 +92,22 @@ const router = createBrowserRouter([
   {
     path: "bookings",
     element: <Bookings />,
+  },
+  {
+    path: "/booking-details",
+    element: <BookingServices />,
+  },
+  {
+    path: "/providerprofile",
+    element: <ProviderProfile />,
+  },
+  {
+    path:"paymentmethod",
+    element:<PaymentMethod/>
+  },
+  {
+    path:"paymenttype",
+    element:<PaymentType/>
   },
   {
     path: "Recipt",
