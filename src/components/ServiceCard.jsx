@@ -5,7 +5,7 @@ import { RxDividerVertical } from "react-icons/rx";
 
 function ServiceCard() {
   return (
-    <div className="flex flex-col h-48 min-w-50 max-w-50 rounded-2xl shadow-lg shadow-neutral-700 cursor-pointer">
+    <div className="flex flex-col min-h-48 min-w-50 md:max-w-50 rounded-2xl shadow-lg shadow-neutral-700 cursor-pointer">
       <div className="bg-black h-1/2 rounded-tl-2xl rounded-tr-2xl">
         <img src="" alt="" />
       </div>

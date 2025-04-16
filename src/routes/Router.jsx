@@ -15,7 +15,9 @@ import ProviderProfile from "../pages/ProvideerProfile";
 import Home from "../pages/Home";
 import Test from "../components/test";
 import DashBoard from "../layouts/DashBoard";
-import Nearby from "../components/nearby";
+import Bookings from "../pages/BookingsList";
+import Allcategory from "../pages/allcategory";
+import BookingServices from "../pages/BookingServices";
 
 const router = createBrowserRouter([
   {
@@ -63,6 +65,10 @@ const router = createBrowserRouter([
     element: <DeliveryServices />,
   },
   {
+    path: "/allcategory",
+    element: <Allcategory />,
+  },
+  {
     path: "/search",
     element: <Search />,
   },
@@ -73,7 +79,7 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Home />,
-      }
+      },
     ],
   },
   {
@@ -81,9 +87,18 @@ const router = createBrowserRouter([
     element: <Test />,
   },
   {
-    path:"/providerprofile",
-    element:<ProviderProfile/>
-  }
+    path: "bookings",
+    element: <Bookings />,
+  },
+
+  {
+    path: "/booking-details",
+    element: <BookingServices />,
+  },
+  {
+    path: "/providerprofile",
+    element: <ProviderProfile />,
+  },
 ]);
 
 export default function Router() {

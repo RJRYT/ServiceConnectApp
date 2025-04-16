@@ -8,7 +8,7 @@ import ServiceCard from "../components/ServiceCard";
 function Home() {
   const popularServices = ["All", "Plumbing", "Electrical", "Health"];
   return (
-    <main className="col-span-12 md:col-span-8 bg-gray-100 sm:bg-[#D9D9D9] flex flex-col items-center px-3 sm:px-22 py-10">
+    <main className="col-span-12 md:col-span-8 bg-gray-100 sm:bg-[#D9D9D9] flex flex-col items-center px-3 sm:px-8 md:px-12 lg:px-22 py-10">
       <Input
         type="text"
         placeholder="search"
@@ -64,7 +64,12 @@ function Home() {
             </button>
           ))}
         </div>
-        <div className="w-full h-auto py-2 my-4 flex flex-nowrap overflow-x-auto lg:grid lg:grid-cols-3 xl:grid-cols-4 gap-2 gap-y-4 ">
+        <div
+          className="w-full h-auto py-2 my-4 flex flex-nowrap overflow-x-auto gap-3 justify-evenly
+            sm:flex-wrap sm:overflow-x-visible
+            md:justify-evenly md:[&>*]:basis-[32%]
+            lg:[&>*]:basis-[24%] "
+        >
           <ServiceCard />
           <ServiceCard />
           <ServiceCard />
