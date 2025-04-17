@@ -21,6 +21,7 @@ import BookingServices from "../pages/BookingServices";
 import PaymentMethod from "../pages/PaymentMethod";
 import PaymentType from "../pages/PaymentType";
 import Erecipt from "../pages/Erecipt";
+import Review from "../pages/Review";
 
 const router = createBrowserRouter([
   {
@@ -112,6 +113,10 @@ const router = createBrowserRouter([
   {
     path: "Recipt",
     element: <Erecipt/>
+  },
+  {
+    path:"review",
+    element:<Review/>
   }
 ]);
 
