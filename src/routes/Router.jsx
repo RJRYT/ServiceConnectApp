@@ -18,6 +18,12 @@ import DashBoard from "../layouts/DashBoard";
 import Bookings from "../pages/BookingsList";
 import Allcategory from "../pages/allcategory";
 import BookingServices from "../pages/BookingServices";
+import PaymentMethod from "../pages/PaymentMethod";
+import PaymentType from "../pages/PaymentType";
+import Erecipt from "../pages/Erecipt";
+import Requestservice from "../pages/Requestservice";
+import Paymentconformation from "../components/modal/paymentconform";
+import ActiveServiceDetails from "../pages/ActiveServiceDetails";
 import Reviewsdetails from "../pages/reviews";
 
 const router = createBrowserRouter([
@@ -91,7 +97,6 @@ const router = createBrowserRouter([
     path: "bookings",
     element: <Bookings />,
   },
-
   {
     path: "/booking-details",
     element: <BookingServices />,
@@ -101,9 +106,33 @@ const router = createBrowserRouter([
     element: <ProviderProfile />,
   },
   {
+    path: "paymentmethod",
+    element: <PaymentMethod />,
+  },
+  {
+    path: "paymenttype",
+    element: <PaymentType />,
+  },
+  {
+    path: "Recipt",
+    element: <Erecipt />,
+  },
+  {
+    path: "/active-service-details",
+    element: <ActiveServiceDetails />,
+  },
+  {
+    path: "/request-service",
+    element: <Requestservice />,
+  },
+  {
+    path: "/paymentconform",
+    element: <Paymentconformation />,
+  },
+  {
     path: "/reviews",
     element: <Reviewsdetails />,
-  }
+  },
 ]);
 
 export default function Router() {
