@@ -18,6 +18,7 @@ import DashBoard from "../layouts/DashBoard";
 import Bookings from "../pages/BookingsList";
 import Allcategory from "../pages/allcategory";
 import BookingServices from "../pages/BookingServices";
+import Paymentconformation from "../components/modal/paymentconform";
 
 const router = createBrowserRouter([
   {
@@ -99,6 +100,11 @@ const router = createBrowserRouter([
     path: "/providerprofile",
     element: <ProviderProfile />,
   },
+  ,
+  {
+    path: "/paymentconform",
+    element: <Paymentconformation />,
+  }
 ]);
 
 export default function Router() {
