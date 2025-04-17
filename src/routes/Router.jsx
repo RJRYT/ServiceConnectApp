@@ -18,6 +18,7 @@ import DashBoard from "../layouts/DashBoard";
 import Bookings from "../pages/BookingsList";
 import Allcategory from "../pages/allcategory";
 import BookingServices from "../pages/BookingServices";
+import Reviewsdetails from "../pages/reviews";
 
 const router = createBrowserRouter([
   {
@@ -99,6 +100,10 @@ const router = createBrowserRouter([
     path: "/providerprofile",
     element: <ProviderProfile />,
   },
+  {
+    path: "/reviews",
+    element: <Reviewsdetails />,
+  }
 ]);
 
 export default function Router() {
