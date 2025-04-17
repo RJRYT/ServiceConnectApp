@@ -21,6 +21,8 @@ import BookingServices from "../pages/BookingServices";
 import PaymentMethod from "../pages/PaymentMethod";
 import PaymentType from "../pages/PaymentType";
 import Erecipt from "../pages/Erecipt";
+import Requestservice from "../pages/Requestservice";
+import Paymentconformation from "../components/modal/paymentconform";
 import ActiveServiceDetails from "../pages/ActiveServiceDetails";
 
 const router = createBrowserRouter([
@@ -117,6 +119,15 @@ const router = createBrowserRouter([
   {
     path: "/active-service-details",
     element: <ActiveServiceDetails />,
+  },
+  {
+    path: "/request-service",
+    element: <Requestservice />,
+  }
+  ,
+  {
+    path: "/paymentconform",
+    element: <Paymentconformation />,
   },
 ]);
 
