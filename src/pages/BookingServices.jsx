@@ -52,6 +52,9 @@ function BookingServices() {
         </div>
         {/* Availability */}
         <Availability />
+        <div className="w-full my-3 flex justify-center self-center">
+        <Submitbutton title="Reshedule Appointment" />
+      </div>
         {/* appointment */}
         <div>
           <div className="p-3 rounded-3xl bg-white text-gray-700">
