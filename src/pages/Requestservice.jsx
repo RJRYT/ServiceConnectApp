@@ -4,6 +4,7 @@ import provider from "../assets/booking-details/provider.png";
 import BookingProfile from "../components/BookingProfile";
 import BookingImagesUpload from "../components/BookingImagesUpload";
 import Availability from "../components/Availability";
+import Submitbutton from "../components/submitbutton";
 
 function Requestservice() {
   return (
@@ -46,6 +47,9 @@ function Requestservice() {
     <div className="w-[98%]">
     <Availability />
     </div>
+    <div className="w-full my-3 flex justify-center self-center">
+        <Submitbutton title="Conform" />
+      </div>
           
     </div>
         

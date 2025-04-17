@@ -25,9 +25,6 @@ function Availability() {
           <DateTimeInput type="time" label="Time" />
         </div>
       </div>
-      <div className="w-full my-3 flex justify-center self-center">
-        <Submitbutton title="Conform" />
-      </div>
     </div>
   );
 }
