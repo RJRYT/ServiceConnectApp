@@ -21,6 +21,7 @@ import BookingServices from "../pages/BookingServices";
 import PaymentMethod from "../pages/PaymentMethod";
 import PaymentType from "../pages/PaymentType";
 import Erecipt from "../pages/Erecipt";
+import ActiveServiceDetails from "../pages/ActiveServiceDetails";
 
 const router = createBrowserRouter([
   {
@@ -102,17 +103,21 @@ const router = createBrowserRouter([
     element: <ProviderProfile />,
   },
   {
-    path:"paymentmethod",
-    element:<PaymentMethod/>
+    path: "paymentmethod",
+    element: <PaymentMethod />,
   },
   {
-    path:"paymenttype",
-    element:<PaymentType/>
+    path: "paymenttype",
+    element: <PaymentType />,
   },
   {
     path: "Recipt",
-    element: <Erecipt/>
-  }
+    element: <Erecipt />,
+  },
+  {
+    path: "/active-service-details",
+    element: <ActiveServiceDetails />,
+  },
 ]);
 
 export default function Router() {
