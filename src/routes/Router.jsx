@@ -22,6 +22,7 @@ import PaymentMethod from "../pages/PaymentMethod";
 import PaymentType from "../pages/PaymentType";
 import Erecipt from "../pages/Erecipt";
 import Requestservice from "../pages/Requestservice";
+import Paymentconformation from "../components/modal/paymentconform";
 
 const router = createBrowserRouter([
   {
@@ -117,6 +118,11 @@ const router = createBrowserRouter([
   {
     path: "/request-service",
     element: <Requestservice />,
+  }
+  ,
+  {
+    path: "/paymentconform",
+    element: <Paymentconformation />,
   }
 ]);
 
