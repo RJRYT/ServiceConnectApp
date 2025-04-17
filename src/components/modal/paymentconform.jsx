@@ -25,7 +25,7 @@ function Paymentconformation() {
                     <p className='w-[100%] h-[20%] flex justify-center items-center text-xl font-bold text-black'>
                         Congratulations
                     </p>
-                    <p className=' h-[40%] w-[90%] ml-4  flex text-[13px] text-center items-center font-semibold text-[#545454]'>
+                    <p className=' h-[40%] w-[80%] ml-8  flex text-[13px] text-center items-center font-semibold text-[#545454]'>
                     Your Payment is Successfully. Purchase a New Course
                     </p>
                     <a className='w-full flex justify-center font-bold underline text-[#167f71] transform hover:scale-105 duration-300' href="#"> Watch the Course</a>
