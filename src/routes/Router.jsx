@@ -24,6 +24,7 @@ import Erecipt from "../pages/Erecipt";
 import Requestservice from "../pages/Requestservice";
 import Paymentconformation from "../components/modal/paymentconform";
 import ActiveServiceDetails from "../pages/ActiveServiceDetails";
+import Reviewsdetails from "../pages/reviews";
 
 const router = createBrowserRouter([
   {
@@ -123,11 +124,14 @@ const router = createBrowserRouter([
   {
     path: "/request-service",
     element: <Requestservice />,
-  }
-  ,
+  },
   {
     path: "/paymentconform",
     element: <Paymentconformation />,
+  },
+  {
+    path: "/reviews",
+    element: <Reviewsdetails />,
   },
 ]);
 
