@@ -27,7 +27,7 @@ function ComplaintForm() {
           image={provider}
         />
         {/* Complaint section */}
-        <div className="p-3 mt-6 rounded-3xl bg-white text-gray-700">
+        <div className="p-3 rounded-3xl bg-white text-gray-700">
           <p className="">Booking Id: 12aa21w</p>
           <ComplaintTitle complaint={complaint} />
           <h3 className="text-black font-medium">Appointment</h3>
@@ -88,7 +88,7 @@ function ComplaintForm() {
             <BookingImagesUpload />
           </div>
           <div className="w-full my-3 flex justify-center self-center">
-            <Submitbutton title="Accept & Pay Full" bgColor={true} />
+            <Submitbutton title="Accept & Pay Full" danger={true} />
           </div>
         </div>
       </div>
