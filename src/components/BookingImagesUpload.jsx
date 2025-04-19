@@ -24,8 +24,8 @@ function BookingImagesUpload() {
     setImages((prev) => [...prev, ...fileList]);
   };
   return (
-    <div className="w-full flex flex-col items-center md:flex-row gap-0 md:gap-5">
-       <div className="relative my-2 shadow-lg shadow-gray-700 w-full md:w-[49%] h-20 bg-white rounded-xl ">
+    <div className="w-full flex flex-col items-center md:order-2">
+      <div className="relative my-2 shadow-lg shadow-gray-700 w-full  h-20 bg-white rounded-xl ">
         <label
           htmlFor="file-upload"
           className="block w-full p-6 text-xl text-gray-400 cursor-pointer rounded-xl hover:bg-gray-100 transition"
@@ -48,22 +48,28 @@ function BookingImagesUpload() {
       </div>
 
       {/* images preview */}
-      <div className="w-full md:w-[49%] h-20">
-      <div className="flex mt-2 items-center gap-4 ">
-        {previews.map((src, index) => (
-          <img
-            key={index}
-            src={src}
-            alt={`Uploaded ${index}`}
-            className="w-16 h-16 object-cover rounded-xl shadow-md "
-          />
-        ))}
-        <label htmlFor="file-upload" className="cursor-pointer h-16 flex items-center">
-          <IoAddOutline size={30} className="text-gray-800 text-20 transform transition duration-300 hover:scale-120" />
-        </label>
+      <div className="w-full h-20">
+        <div className="flex mt-2 items-center gap-4 ">
+          {previews.map((src, index) => (
+            <img
+              key={index}
+              src={src}
+              alt={`Uploaded ${index}`}
+              className="w-16 h-16 object-cover rounded-xl shadow-md "
+            />
+          ))}
+          <label
+            htmlFor="file-upload"
+            className="cursor-pointer h-16 flex items-center"
+          >
+            <IoAddOutline
+              size={30}
+              className="text-gray-800 text-20 transform transition duration-300 hover:scale-120"
+            />
+          </label>
+        </div>
       </div>
-      </div>
-      </div>
+    </div>
   );
 }
 

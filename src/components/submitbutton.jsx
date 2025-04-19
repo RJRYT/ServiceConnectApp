@@ -1,14 +1,16 @@
 import React from "react";
 import { IoMdArrowRoundForward } from "react-icons/io";
 
-function Submitbutton({ title, bgColor }) {
+function Submitbutton({ title, danger }) {
   return (
     <div>
       <button
         className={`${
-          bgColor ? "bg-red-950" : "bg-slate-900"
+          danger
+            ? "bg-red-950 hover:bg-red-800"
+            : "bg-slate-900 hover:bg-blue-950"
         } text-white py-4 rounded-full mt-2 flex justify-center items-center w-full 
-           hover:bg-blue-950 transition-all duration-300 ease-in-out 
+            transition-all duration-300 ease-in-out 
            relative max-w-[360px] min-w-[360px] shadow-lg hover:shadow-xl 
            transform hover:scale-105 active:scale-95`}
       >
