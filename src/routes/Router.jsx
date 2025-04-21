@@ -26,6 +26,7 @@ import Paymentconformation from "../components/modal/paymentconform";
 import ActiveServiceDetails from "../pages/ActiveServiceDetails";
 import Reviewsdetails from "../pages/reviews";
 import ActiceServices from "../pages/ActiceServices";
+import ComplaintsList from "../pages/ComplaintsList";
 
 const router = createBrowserRouter([
   {
@@ -138,6 +139,10 @@ const router = createBrowserRouter([
     path: "active-services",
     element: <ActiceServices/>
   },
+  {
+    path: "complaints-list",
+    element: <ComplaintsList/>
+  }
 ]);
 
 export default function Router() {

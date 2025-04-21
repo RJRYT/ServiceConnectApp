@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
-function StatusChangeFilter({ options = []}) {
+function StatusChangeFilter({ options = [], onChange }) {
   const [active, setActive] = useState(options[0]);
 
   const handleClick = (label) => {
     setActive(label);
-    if (onChange) onChange(label);
+    if (onChange) onChange(label); // Trigger the callback
   };
 
   const getButtonClass = (label) => {

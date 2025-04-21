@@ -4,7 +4,6 @@ import { IoMdClose } from "react-icons/io";
 import { FaRegUserCircle } from "react-icons/fa";
 import { FaRegCalendarAlt } from "react-icons/fa";
 import { FiAlertOctagon } from "react-icons/fi";
-import Submitbutton from './submitbutton';
 import { IoMdArrowRoundForward } from "react-icons/io";
 
 
@@ -49,7 +48,7 @@ function Statusbox({title}) {
               </div>
             </div>
             <button className="bg-green-800 text-white py-2 rounded-full mt-2 flex justify-center items-center
-                         hover:bg-blue-950 transition-all duration-300 ease-in-out 
+                         hover:bg-green-900 transition-all duration-300 ease-in-out 
                          relative max-w-[300px] min-w-[300px] shadow-lg hover:shadow-xl 
                          transform hover:scale-105 active:scale-95">
         {title}
