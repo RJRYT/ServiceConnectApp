@@ -48,7 +48,7 @@ function BookingImagesUpload() {
       </div>
 
       {/* images preview */}
-      <div className="w-full h-20">
+      <div className="w-full h-auto">
         <div className="flex mt-2 items-center gap-4 ">
           {previews.map((src, index) => (
             <img
@@ -58,7 +58,7 @@ function BookingImagesUpload() {
               className="w-16 h-16 object-cover rounded-xl shadow-md "
             />
           ))}
-          <label
+          {/* <label
             htmlFor="file-upload"
             className="cursor-pointer h-16 flex items-center"
           >
@@ -66,7 +66,7 @@ function BookingImagesUpload() {
               size={30}
               className="text-gray-800 text-20 transform transition duration-300 hover:scale-120"
             />
-          </label>
+          </label> */}
         </div>
       </div>
     </div>
