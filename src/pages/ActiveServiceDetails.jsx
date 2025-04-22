@@ -17,37 +17,41 @@ function ActiveServiceDetails() {
       <Mainheader title="SERVICE DETAILS" />
       {/* main div */}
       <div className="p-4 min-h-screen bg-[#D9D9DB] ">
-        <div>
-          <BookingProfile
-            name="Nazrul Islam"
-            service="Electrification"
-            image={provider}
-          />
-          <p className="">Booking Id: 12aa21w</p>
+        <BookingProfile
+          name="Nazrul Islam"
+          service="Electrification"
+          image={provider}
+        />
+        <p className="">Booking Id: 12aa21w</p>
+        <div className="flex-col md:columns-2 gap-2 mb-5">
           {/* title */}
-          <div className="relative my-2 shadow-lg shadow-gray-700 max-w-[360px]  bg-white rounded-xl ">
+          <div className="relative w-full h-20  my-2 shadow-lg shadow-gray-700 bg-white rounded-xl ">
             <p className="absolute text-gray-400  top-1 left-6">Title</p>
             <input
-              className="px-6 pt-8 pb-2 w-full rounded-xl placeholder-gray-400 placeholder-opacity-80 text-xl "
+              className="px-6 w-full h-full rounded-xl placeholder-gray-400 placeholder-opacity-80 text-xl "
               type="text"
               placeholder="Change bulb"
             />
           </div>
           {/* description */}
-          <div className="relative my-2 shadow-lg shadow-gray-700 max-w-[360px]  bg-white rounded-xl ">
+          <div className="relative my-2 w-full shadow-lg shadow-gray-700 bg-white rounded-xl ">
             <p className="absolute top-1 left-6 text-sm text-gray-400">
               Description
             </p>
             <textarea
-              className="px-6 pt-6 pb-2 w-full rounded-xl border border-gray-300  placeholder-gray-400 text-xl min-h-[110px]"
+              className="px-6 pt-6 pb-2 w-full min-h-[110px] rounded-xl placeholder-gray-400 text-xl"
               placeholder="Add a description..."
             ></textarea>
           </div>
           {/* image upload */}
           <BookingImagesUpload />
         </div>
+
         {/* Availability */}
         <Availability />
+        <div className="w-full my-3 flex justify-center self-center">
+          <Submitbutton title="Completed" />
+        </div>
         {/* appointment */}
         <div>
           <div className="p-3 rounded-3xl bg-white text-gray-700">
@@ -81,7 +85,7 @@ function ActiveServiceDetails() {
             <Submitbutton title="Accept & Pay Full" />
           </div>
           <div className="w-full my-1 flex justify-center self-center">
-            <Submitbutton title="Raise a Complaint" bgColor={true} />
+            <Submitbutton title="Raise a Complaint" danger={true} />
           </div>
         </div>
       </div>

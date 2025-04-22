@@ -25,6 +25,7 @@ import Requestservice from "../pages/Requestservice";
 import Paymentconformation from "../components/modal/paymentconform";
 import ActiveServiceDetails from "../pages/ActiveServiceDetails";
 import Reviewsdetails from "../pages/reviews";
+import ComplaintForm from "../pages/ComplaintForm";
 import ActiceServices from "../pages/ActiceServices";
 import ComplaintsList from "../pages/ComplaintsList";
 
@@ -134,6 +135,11 @@ const router = createBrowserRouter([
   {
     path: "/reviews",
     element: <Reviewsdetails />,
+  },
+  ,
+  {
+    path: "/complaint-form",
+    element: <ComplaintForm />,
   },
   {
     path: "active-services",
