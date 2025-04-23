@@ -41,18 +41,21 @@ const ReviewPhotoUpload = () => {
                         onChange={handleImageChange}
                         className="hidden"
                     />
-                    {previews.map((preview, index) => (
-                        <div key={index} className="rounded-lg shadow overflow-hidden mb-2">
+                    <div className="flex gap-2">
+                      {previews.map((preview, index) => (
+                        <div key={index} className=" rounded-lg shadow overflow-hidden mb-2">
                             {preview.type === 'image' ? (
-                                <img src={preview.url} alt={`preview-${index}`} className="w-16 h-20 object-cover" />
+                                <img src={preview.url} alt={`preview-${index}`} className=" w-16 h-25 object-cover" />
                             ) : (
-                                <video controls className="w-[150px] sm:h-30 sm:w-[200px] h-25 object-cover ">
+                                <video controls className=" w-[150px] sm:h-25 sm:w-[200px] h-25 object-cover ">
                                     <source src={preview.url} type="video/mp4" />
                                     Your browser does not support the video tag.
                                 </video>
                             )}
                         </div>
-                    ))}
+                    ))}   
+                    </div>
+                   
                     <span className="text-gray-700 font-medium">Click here to Upload</span>
                     <input type="file" className="hidden" />
                 </label>

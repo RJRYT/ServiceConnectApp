@@ -22,6 +22,7 @@ import PaymentMethod from "../pages/PaymentMethod";
 import PaymentType from "../pages/PaymentType";
 import Erecipt from "../pages/Erecipt";
 import Review from "../pages/Review";
+import ServiceConform from "../components/modal/ServiceConform";
 
 const router = createBrowserRouter([
   {
@@ -117,6 +118,9 @@ const router = createBrowserRouter([
   {
     path:"review",
     element:<Review/>
+  },{
+    path:"serviceconform",
+    element:<ServiceConform/>
   }
 ]);
 
