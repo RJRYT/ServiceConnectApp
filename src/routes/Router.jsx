@@ -25,6 +25,7 @@ import Requestservice from "../pages/Requestservice";
 import Paymentconformation from "../components/modal/paymentconform";
 import ActiveServiceDetails from "../pages/ActiveServiceDetails";
 import Reviewsdetails from "../pages/reviews";
+import Editprofile from "../pages/Editprofile";
 
 const router = createBrowserRouter([
   {
@@ -133,6 +134,10 @@ const router = createBrowserRouter([
     path: "/reviews",
     element: <Reviewsdetails />,
   },
+  {
+    path: "/editprofile",
+    element: <Editprofile />,
+  }
 ]);
 
 export default function Router() {
