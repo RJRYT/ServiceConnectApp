@@ -23,6 +23,13 @@ import PaymentType from "../pages/PaymentType";
 import Erecipt from "../pages/Erecipt";
 import Review from "../pages/Review";
 import ServiceConform from "../components/modal/ServiceConform";
+import Requestservice from "../pages/Requestservice";
+import Paymentconformation from "../components/modal/paymentconform";
+import ActiveServiceDetails from "../pages/ActiveServiceDetails";
+import Reviewsdetails from "../pages/reviews";
+import ComplaintForm from "../pages/ComplaintForm";
+import ActiceServices from "../pages/ActiceServices";
+import ComplaintsList from "../pages/ComplaintsList";
 
 const router = createBrowserRouter([
   {
@@ -104,12 +111,12 @@ const router = createBrowserRouter([
     element: <ProviderProfile />,
   },
   {
-    path:"paymentmethod",
-    element:<PaymentMethod/>
+    path: "paymentmethod",
+    element: <PaymentMethod />,
   },
   {
-    path:"paymenttype",
-    element:<PaymentType/>
+    path: "paymenttype",
+    element: <PaymentType />,
   },
   {
     path: "Recipt",
@@ -121,6 +128,36 @@ const router = createBrowserRouter([
   },{
     path:"serviceconform",
     element:<ServiceConform/>
+    element: <Erecipt />,
+  },
+  {
+    path: "/active-service-details",
+    element: <ActiveServiceDetails />,
+  },
+  {
+    path: "/request-service",
+    element: <Requestservice />,
+  },
+  {
+    path: "/paymentconform",
+    element: <Paymentconformation />,
+  },
+  {
+    path: "/reviews",
+    element: <Reviewsdetails />,
+  },
+  ,
+  {
+    path: "/complaint-form",
+    element: <ComplaintForm />,
+  },
+  {
+    path: "active-services",
+    element: <ActiceServices/>
+  },
+  {
+    path: "complaints-list",
+    element: <ComplaintsList/>
   }
 ]);
 

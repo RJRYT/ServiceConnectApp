@@ -12,7 +12,7 @@ function DateTimeInput({ type, label, className = "" }) {
   const isDate = type === "date";
   const Icon = isDate ? BsCalendarDate : BsClock;
   return (
-    <div className={`relative h-16 min-w-1/2 ${className}`}>
+    <div className={`relative h-16 min-w-[49%] ${className}`}>
       <p className="absolute left-4 top-1 text-sm text-gray-400">{label}</p>
       <Icon className="absolute right-4 top-5" size={25} color="gray" />
       <input
