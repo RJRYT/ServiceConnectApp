@@ -128,7 +128,6 @@ const router = createBrowserRouter([
   },{
     path:"serviceconform",
     element:<ServiceConform/>
-    element: <Erecipt />,
   },
   {
     path: "/active-service-details",
@@ -146,7 +145,6 @@ const router = createBrowserRouter([
     path: "/reviews",
     element: <Reviewsdetails />,
   },
-  ,
   {
     path: "/complaint-form",
     element: <ComplaintForm />,
