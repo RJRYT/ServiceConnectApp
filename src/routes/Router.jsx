@@ -26,6 +26,7 @@ import Paymentconformation from "../components/modal/paymentconform";
 import ActiveServiceDetails from "../pages/ActiveServiceDetails";
 import Reviewsdetails from "../pages/reviews";
 import ComplaintForm from "../pages/ComplaintForm";
+import AboutUs from "../pages/AboutUs";
 
 const router = createBrowserRouter([
   {
@@ -139,6 +140,10 @@ const router = createBrowserRouter([
     path: "/complaint-form",
     element: <ComplaintForm />,
   },
+  {
+    path:"/about",
+    element:<AboutUs/>
+  }
 ]);
 
 export default function Router() {
