@@ -31,6 +31,7 @@ import Profile from "../pages/Profile";
 import ComplaintForm from "../pages/ComplaintForm";
 import ActiceServices from "../pages/ActiceServices";
 import ComplaintsList from "../pages/ComplaintsList";
+import NotificationSettings from "../pages/NotificationSettings";
 import NotificationList from "./../pages/NotificationList";
 import Editprofile from "../pages/Editprofile";
 
@@ -162,7 +163,11 @@ const router = createBrowserRouter([
   },
   {
     path: "complaints-list",
-    element: <ComplaintsList />,
+    element: <ComplaintsList/>
+  },
+  {
+    path: "notification-settings",
+    element: <NotificationSettings/>
   },
   {
     path: "/notifications",
