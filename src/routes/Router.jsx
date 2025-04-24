@@ -151,6 +151,7 @@ const router = createBrowserRouter([
     path: "/profile",
     element: <Profile />,
   },
+  {
     path: "/complaint-form",
     element: <ComplaintForm />,
   },
