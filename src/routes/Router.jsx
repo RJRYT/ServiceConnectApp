@@ -21,6 +21,8 @@ import BookingServices from "../pages/BookingServices";
 import PaymentMethod from "../pages/PaymentMethod";
 import PaymentType from "../pages/PaymentType";
 import Erecipt from "../pages/Erecipt";
+import Review from "../pages/Review";
+import ServiceConform from "../components/modal/ServiceConform";
 import Requestservice from "../pages/Requestservice";
 import Paymentconformation from "../components/modal/paymentconform";
 import ActiveServiceDetails from "../pages/ActiveServiceDetails";
@@ -118,7 +120,14 @@ const router = createBrowserRouter([
   },
   {
     path: "Recipt",
-    element: <Erecipt />,
+    element: <Erecipt/>
+  },
+  {
+    path:"review",
+    element:<Review/>
+  },{
+    path:"serviceconform",
+    element:<ServiceConform/>
   },
   {
     path: "/active-service-details",
@@ -136,7 +145,6 @@ const router = createBrowserRouter([
     path: "/reviews",
     element: <Reviewsdetails />,
   },
-  ,
   {
     path: "/complaint-form",
     element: <ComplaintForm />,
