@@ -26,6 +26,8 @@ import Paymentconformation from "../components/modal/paymentconform";
 import ActiveServiceDetails from "../pages/ActiveServiceDetails";
 import Reviewsdetails from "../pages/reviews";
 import ComplaintForm from "../pages/ComplaintForm";
+import ActiceServices from "../pages/ActiceServices";
+import ComplaintsList from "../pages/ComplaintsList";
 import NotificationList from "./../pages/NotificationList";
 
 const router = createBrowserRouter([
@@ -139,6 +141,14 @@ const router = createBrowserRouter([
   {
     path: "/complaint-form",
     element: <ComplaintForm />,
+  },
+  {
+    path: "active-services",
+    element: <ActiceServices />,
+  },
+  {
+    path: "complaints-list",
+    element: <ComplaintsList />,
   },
   {
     path: "/notifications",
