@@ -31,6 +31,7 @@ import Profile from "../pages/Profile";
 import ComplaintForm from "../pages/ComplaintForm";
 import ActiceServices from "../pages/ActiceServices";
 import ComplaintsList from "../pages/ComplaintsList";
+import NotificationList from "./../pages/NotificationList";
 import Editprofile from "../pages/Editprofile";
 
 const router = createBrowserRouter([
@@ -157,11 +158,15 @@ const router = createBrowserRouter([
   },
   {
     path: "active-services",
-    element: <ActiceServices/>
+    element: <ActiceServices />,
   },
   {
     path: "complaints-list",
-    element: <ComplaintsList/>
+    element: <ComplaintsList />,
+  },
+  {
+    path: "/notifications",
+    element: <NotificationList />,
   },
   {
     path: "/editprofile",
