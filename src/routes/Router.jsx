@@ -34,6 +34,7 @@ import ComplaintsList from "../pages/ComplaintsList";
 import NotificationSettings from "../pages/NotificationSettings";
 import NotificationList from "./../pages/NotificationList";
 import Editprofile from "../pages/Editprofile";
+import InboxChat from "./../pages/InboxChat";
 
 const router = createBrowserRouter([
   {
@@ -124,14 +125,15 @@ const router = createBrowserRouter([
   },
   {
     path: "Recipt",
-    element: <Erecipt/>
+    element: <Erecipt />,
   },
   {
-    path:"review",
-    element:<Review/>
-  },{
-    path:"serviceconform",
-    element:<ServiceConform/>
+    path: "review",
+    element: <Review />,
+  },
+  {
+    path: "serviceconform",
+    element: <ServiceConform />,
   },
   {
     path: "/active-service-details",
@@ -163,11 +165,11 @@ const router = createBrowserRouter([
   },
   {
     path: "complaints-list",
-    element: <ComplaintsList/>
+    element: <ComplaintsList />,
   },
   {
     path: "notification-settings",
-    element: <NotificationSettings/>
+    element: <NotificationSettings />,
   },
   {
     path: "/notifications",
@@ -176,7 +178,11 @@ const router = createBrowserRouter([
   {
     path: "/editprofile",
     element: <Editprofile />,
-  }
+  },
+  {
+    path: "/inbox-chat",
+    element: <InboxChat />,
+  },
 ]);
 
 export default function Router() {
