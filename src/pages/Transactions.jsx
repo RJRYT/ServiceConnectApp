@@ -6,8 +6,11 @@ import Transaction from '../components/Transaction'
 
 const Transactions = () => {
     return (
-        <div className='min-h-screen bg-[#d9d9d9]'>
+        <div className='min-h-screen bg-[#d9d9d9] '>
             <Mainheader title="TRANSACTIONS" />
+            <Transaction/> 
+            <Transaction/>
+            <Transaction/>
             <Transaction/>
             <Transaction/>
             <Transaction/>
