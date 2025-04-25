@@ -11,6 +11,9 @@ function Input({
   id,
   className = "",
   options = [],
+  bgColor='bg-[#736A68]',
+  textColor="text-white",
+  placeholderColor='placeholder-white'
 }) {
   const dateInputRef = useRef(null);
   const [showPassword, setShowPassword] = useState(false);
@@ -26,7 +29,7 @@ function Input({
           value={value}
           onChange={onChange}
           id={id}
-          className={`bg-[#736A68] px-4 text-white rounded-xl h-full w-full placeholder-white font-mulish focus:outline-none ${className}`}
+          className={` ${bgColor} px-4 ${textColor} rounded-xl h-full w-full ${placeholderColor} font-mulish focus:outline-none ${className}`}
         >
           <option value="">{placeholder}</option>
           {options.map((option) => (
@@ -42,9 +45,9 @@ function Input({
           value={value}
           onChange={onChange}
           id={id}
-          className={`bg-[#736A68] px-${
+          className={` ${bgColor} px-${
             icon ? "12" : "4"
-          } text-white rounded-xl h-full w-full placeholder-white font-mulish focus:outline-none`}
+          } ${textColor} rounded-xl h-full w-full ${placeholderColor} font-mulish focus:outline-none`}
           style={{ colorScheme: "dark" }}
         />
       ) : type === "password" ? (
@@ -55,9 +58,9 @@ function Input({
             placeholder={placeholder}
             value={value}
             onChange={onChange}
-            className={`bg-[#736A68] px-${
+            className={` ${bgColor} px-${
               icon ? "12" : "4"
-            } text-white rounded-xl h-full w-full placeholder-white font-mulish focus:outline-none ${className}`}
+            } ${textColor} rounded-xl h-full w-full ${placeholderColor} font-mulish focus:outline-none ${className}`}
           />
           <button
             type="button"
@@ -73,9 +76,9 @@ function Input({
           placeholder={placeholder}
           value={value}
           onChange={onChange}
-          className={`bg-[#736A68] px-${
+          className={` ${bgColor} px-${
             icon ? "12" : "4"
-          } text-white rounded-xl h-full w-full placeholder-white font-mulish focus:outline-none ${className}`}
+          } ${textColor} rounded-xl h-full w-full ${placeholderColor} font-mulish focus:outline-none ${className}`}
         />
       )}
     </div>

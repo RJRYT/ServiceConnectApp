@@ -2,8 +2,8 @@ import React from "react";
 
 function BookingProfile({ name, service, image }) {
   return (
-    <div className=" my-2 flex gap-3">
-      <img
+<div className="my-2 flex gap-3 w-[98%] ml-0 md:ml-4">
+    <img
         className="h-18 w-18 object-cover rounded-full"
         src={image}
         alt="service-provider-image"
