@@ -9,16 +9,12 @@ import BookingImagesUpload from "../components/BookingImagesUpload";
 import { BsExclamationOctagon } from "react-icons/bs";
 import Availability from "../components/Availability";
 
-function BookingServices() {
-  const items = [
-    { description: "Bulb", quantity: 2, price: 50 },
-    { description: "Wiring", quantity: 1, price: 100 },
-    { description: "Sockets", quantity: 3, price: 25 },
-  ];
+function ActiveServiceDetails() {
+  const items = [{ description: "Bulb change", quantity: 2, price: 50 }];
 
   return (
     <>
-      <Mainheader title="BOOKING DETAILS" />
+      <Mainheader title="SERVICE DETAILS" />
       {/* main div */}
       <div className="p-4 min-h-screen bg-[#D9D9DB] ">
         <BookingProfile
@@ -27,8 +23,8 @@ function BookingServices() {
           image={provider}
         />
         <p className="">Booking Id: 12aa21w</p>
-        {/* title */}
         <div className="flex-col md:columns-2 gap-2 mb-5">
+          {/* title */}
           <div className="relative w-full h-20  my-2 shadow-lg shadow-gray-700 bg-white rounded-xl ">
             <p className="absolute text-gray-400  top-1 left-6">Title</p>
             <input
@@ -50,10 +46,11 @@ function BookingServices() {
           {/* image upload */}
           <BookingImagesUpload />
         </div>
+
         {/* Availability */}
         <Availability />
         <div className="w-full my-3 flex justify-center self-center">
-          <Submitbutton title="Reshedule Appointment" />
+          <Submitbutton title="Completed" />
         </div>
         {/* appointment */}
         <div>
@@ -84,8 +81,11 @@ function BookingServices() {
             </div>
           </div>
 
-          <div className="w-full my-3 flex justify-center self-center">
+          <div className="w-full mt-2 flex justify-center self-center">
             <Submitbutton title="Accept & Pay Full" />
+          </div>
+          <div className="w-full my-1 flex justify-center self-center">
+            <Submitbutton title="Raise a Complaint" danger={true} />
           </div>
         </div>
       </div>
@@ -93,4 +93,4 @@ function BookingServices() {
   );
 }
 
-export default BookingServices;
+export default ActiveServiceDetails;

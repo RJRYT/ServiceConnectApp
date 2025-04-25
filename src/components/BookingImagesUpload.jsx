@@ -55,14 +55,20 @@ function BookingImagesUpload() {
               key={index}
               src={src}
               alt={`Uploaded ${index}`}
-              className="w-16 h-16 md:w-22 md:h-24 object-cover rounded-xl shadow-md"
+              className="w-16 h-16 object-cover rounded-xl shadow-md "
             />
           ))}
+          {/* <label
+            htmlFor="file-upload"
+            className="cursor-pointer h-16 flex items-center"
+          >
+            <IoAddOutline
+              size={30}
+              className="text-gray-800 text-20 transform transition duration-300 hover:scale-120"
+            />
+          </label> */}
         </div>
       </div>
-
-
-
     </div>
   );
 }

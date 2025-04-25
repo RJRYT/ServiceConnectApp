@@ -18,7 +18,6 @@ function Requestservice() {
             service="Electrification"
             image={provider}
           />
-
           <ServiceDeatails />
 
           {/* Availability */}
@@ -32,9 +31,8 @@ function Requestservice() {
         </div>
 
       </div>
-
     </>
-  )
+  );
 }
 
 export default Requestservice;
