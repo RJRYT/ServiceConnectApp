@@ -1,10 +1,22 @@
-import React, {useState} from 'react'
-import Mainheader from '../components/mainheader'
+import React, { useState } from "react";
+import Mainheader from "../components/mainheader";
+import {
+  FaFacebook,
+  FaTwitter,
+  FaInstagram,
+  FaHeadphones,
+} from "react-icons/fa";
+import { BsWhatsapp } from "react-icons/bs";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 
-const tabs = ["General", "Account", "Payment", "Service"];
+export default function SupportScreen() {
+  const [tab, setTab] = useState("faq");
+  const [faqCategory, setFaqCategory] = useState("General");
+  const [openIndex, setOpenIndex] = useState(null);
 
-const faqs = {
+  const categories = ["General", "Account", "Payment", "Service"];
+
+  const faqs = {
     General: [
       {
         question: "How do I manage my notifications?",
@@ -20,96 +32,127 @@ const faqs = {
         answer: "",
       },
       {
+        question: "How do I manage my notifications?",
+        answer: "",
+      },
+      {
         question: "Is my data safe and private?",
         answer: "",
       },
     ],
-    Account: [],
-    Payment: [],
-    Service: [],
+    Account: [
+      {
+        question: "How do I start a guided meditation session?",
+        answer: "",
+      },
+    ],
+    Payment: [
+      {
+        question: "Is my data safe and private?",
+        answer: "",
+      },
+    ],
+    Service: [
+      {
+        question: "How do I manage my notifications?",
+        answer: "",
+      },
+    ],
   };
-  
 
-const HelpCenter = () => {
-    const [activeTab, setActiveTab] = useState("General");
-    const [activeView, setActiveView] = useState("faq"); // "faq" or "contact"
-    const [openIndex, setOpenIndex] = useState(null);
-
-    const toggleIndex = (index) => {
-        setOpenIndex(openIndex === index ? null : index);
-      };
+  const contacts = [
+    { icon: <FaHeadphones />, label: "Customer Services" },
+    { icon: <BsWhatsapp />, label: "WhatsApp" },
+    { icon: <FaFacebook />, label: "Facebook" },
+    { icon: <FaTwitter />, label: "Twitter" },
+    { icon: <FaInstagram />, label: "Instagram" },
+  ];
 
   return (
-    <div className='min-h-[100dvh] w-full bg-[#d9d9d9]'>
-       <Mainheader title="HELP CENTER" />
-       <div className="flex justify-center items-center  border-gray-400 pb-3  mb-2">
-        {/* <button className="text-xs font-semibold text-gray-700">faqFAQ</button>
-        <button className="text-xs font-semibold text-white bg-gray-400 px-4 py-2 rounded-md">
-          CONTACT US
-        </button> */}
+    <div className="min-h-screen bg-gray-200 font-sans">
+      <Mainheader title="HELP CENTER" />
+      {/* Header Tabs */}
+      <div className="flex">
         <button
-          onClick={() => setActiveView("faq")}
-          className={`text-lg font-semibold py-3 ${
-            activeView === "faq" ? " border-b border-violet-700 " : ""
+          onClick={() => setTab("faq")}
+          className={`flex-1 py-3 pt-6 text-center font-semibold text-sm ${
+            tab === "faq"
+              ? "bg-white border-b-2 border-purple-500"
+              : "bg-gray-200 text-gray-500"
           }`}
         >
-          faqFAQ
+          FAQ
         </button>
         <button
-          onClick={() => setActiveView("contact")}
-          className={`text-lg font-semibold px-4 py-2  ${
-            activeView === "contact"
-              ? "border-b border-violet-700 ml-30 "
-              :"border-b border-violet-700  "
+          onClick={() => setTab("contact")}
+          className={`flex-1 py-3 pt-6 text-center font-semibold text-sm ${
+            tab === "contact"
+              ? "bg-white border-b-2 border-purple-500"
+              : "bg-gray-200 text-gray-500"
           }`}
         >
           CONTACT US
         </button>
       </div>
 
-       {/* Filter Buttons */}
-       <div className="flex gap-2 mb-6 flex-wrap ">
-        {tabs.map((tab) => (
-          <button
-            key={tab}
-            onClick={() => setActiveTab(tab)}
-            className={`px-4 py-1 rounded-full border ${
-              activeTab === tab
-                ? "bg-black text-white"
-                : "border-black text-black"
-            }`}
-          >
-            {tab}
-          </button>
-        ))}
-      </div>
-
-        {/* Accordion */}
-      <div className="space-y-4 p-3">
-        {faqs[activeTab].map((item, index) => (
-          <div
-            key={index}
-            className="bg-white rounded-xl shadow px-4 py-3 cursor-pointer"
-            onClick={() => toggleIndex(index)}
-          >
-            <div className="flex justify-between items-center">
-              <span className="text-sm font-semibold">{item.question}</span>
-              {openIndex === index ? (
-                <FaChevronUp className="text-gray-600 text-xs" />
-              ) : (
-                <FaChevronDown className="text-gray-600 text-xs" />
-              )}
-            </div>
-
-            {openIndex === index && item.answer && (
-              <p className="text-sm text-gray-600 mt-2">{item.answer}</p>
-            )}
+      {tab === "faq" ? (
+        <div className="p-4">
+          {/* Category Filter Buttons */}
+          <div className="flex justify-center items-center  gap-2 overflow-x-auto pb-3">
+            {categories.map((cat) => (
+              <button
+                key={cat}
+                onClick={() => {
+                  setFaqCategory(cat);
+                  setOpenIndex(null);
+                }}
+                className={`px-4 py-3 rounded-full text-sm font-medium border ${
+                  faqCategory === cat
+                    ? "bg-black text-white"
+                    : "border-black text-black"
+                }`}
+              >
+                {cat}
+              </button>
+            ))}
           </div>
-        ))}
-      </div>
-      
-    </div>
-  )
-}
 
-export default HelpCenter
+          {/* FAQ Accordion */}
+          <div className="space-y-4 mt-4">
+            {faqs[faqCategory].map((item, index) => (
+              <div
+                key={index}
+                className="bg-white p-4 rounded-xl shadow cursor-pointer"
+                onClick={() => setOpenIndex(openIndex === index ? null : index)}
+              >
+                <div className="flex justify-between items-center">
+                  <p className="text-sm font-medium">{item.question}</p>
+                  {openIndex === index ? (
+                    <FaChevronUp className="text-gray-500 text-xs" />
+                  ) : (
+                    <FaChevronDown className="text-gray-500 text-xs" />
+                  )}
+                </div>
+                {openIndex === index && item.answer && (
+                  <p className="text-sm text-gray-600 mt-2">{item.answer}</p>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      ) : (
+        <div className="p-4 space-y-4">
+          {contacts.map((c, index) => (
+            <div
+              key={index}
+              className="bg-white flex items-center gap-4 p-4 rounded-xl shadow"
+            >
+              <div className="text-xl">{c.icon}</div>
+              <p className="font-medium text-sm">{c.label}</p>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}

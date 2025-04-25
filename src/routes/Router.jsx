@@ -38,6 +38,7 @@ import NotificationList from "./../pages/NotificationList";
 import Editprofile from "../pages/Editprofile";
 import Security from "../pages/Security";
 import InboxChat from "./../pages/InboxChat";
+import HelpCenter from "../pages/HelpCenter";
 
 const router = createBrowserRouter([
   {
@@ -139,10 +140,10 @@ const router = createBrowserRouter([
     element: <ServiceConform />,
   },
   {
-    path:"transactions",
-    element: <Transactions/>
-},
-  {                                  
+    path: "transactions",
+    element: <Transactions />,
+  },
+  {
     path: "/active-service-details",
     element: <ActiveServiceDetails />,
   },
@@ -167,9 +168,9 @@ const router = createBrowserRouter([
     element: <ComplaintForm />,
   },
   {
-    path:"/about",
-    element:<AboutUs/>
-},
+    path: "/about",
+    element: <AboutUs />,
+  },
   {
     path: "active-services",
     element: <ActiceServices />,
@@ -197,6 +198,10 @@ const router = createBrowserRouter([
   {
     path: "/inbox-chat",
     element: <InboxChat />,
+  },
+  {
+    path: "help-center",
+    element: <HelpCenter />,
   },
 ]);
 
