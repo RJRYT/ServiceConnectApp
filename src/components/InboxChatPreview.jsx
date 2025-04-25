@@ -8,7 +8,7 @@ function InboxChatPreview({
   messageTime,
 }) {
   return (
-    <a className="w-full flex p-4 items-center shadow-md shadow-gray-700 justify-between gap-4 cursor-pointer">
+    <a className="w-full flex p-4 items-center shadow-md shadow-gray-300 justify-between gap-4 cursor-pointer">
       {/* sender profile image */}
       <img
         className="h-14 w-14 rounded-full border-3 border-white shadow-md shadow-black object-cover"
