@@ -137,22 +137,21 @@ const router = createBrowserRouter([
     path: "/reviews",
     element: <Reviewsdetails />,
   },
-  ,
   {
     path: "/complaint-form",
     element: <ComplaintForm />,
   },
   {
     path: "active-services",
-    element: <ActiceServices/>
+    element: <ActiceServices />,
   },
   {
     path: "complaints-list",
-    element: <ComplaintsList/>
+    element: <ComplaintsList />,
   },
   {
     path: "help-center",
-    element: <HelpCenter/>
+    element: <HelpCenter />,
   },
 ]);
 
