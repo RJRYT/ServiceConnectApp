@@ -29,6 +29,7 @@ import ActiveServiceDetails from "../pages/ActiveServiceDetails";
 import Reviewsdetails from "../pages/reviews";
 import Profile from "../pages/Profile";
 import ComplaintForm from "../pages/ComplaintForm";
+import AboutUs from "../pages/AboutUs";
 import ActiceServices from "../pages/ActiceServices";
 import ComplaintsList from "../pages/ComplaintsList";
 import NotificationSettings from "../pages/NotificationSettings";
@@ -157,6 +158,10 @@ const router = createBrowserRouter([
     path: "/complaint-form",
     element: <ComplaintForm />,
   },
+  {
+    path:"/about",
+    element:<AboutUs/>
+},
   {
     path: "active-services",
     element: <ActiceServices />,
