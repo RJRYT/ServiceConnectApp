@@ -21,13 +21,23 @@ import BookingServices from "../pages/BookingServices";
 import PaymentMethod from "../pages/PaymentMethod";
 import PaymentType from "../pages/PaymentType";
 import Erecipt from "../pages/Erecipt";
+import Review from "../pages/Review";
+import ServiceConform from "../components/modal/ServiceConform";
+import Transactions from "../pages/Transactions";
 import Requestservice from "../pages/Requestservice";
 import Paymentconformation from "../components/modal/paymentconform";
 import ActiveServiceDetails from "../pages/ActiveServiceDetails";
 import Reviewsdetails from "../pages/reviews";
+import Profile from "../pages/Profile";
 import ComplaintForm from "../pages/ComplaintForm";
+import AboutUs from "../pages/AboutUs";
 import ActiceServices from "../pages/ActiceServices";
 import ComplaintsList from "../pages/ComplaintsList";
+import NotificationSettings from "../pages/NotificationSettings";
+import NotificationList from "./../pages/NotificationList";
+import Editprofile from "../pages/Editprofile";
+import Security from "../pages/Security";
+import InboxChat from "./../pages/InboxChat";
 import HelpCenter from "../pages/HelpCenter";
 
 const router = createBrowserRouter([
@@ -122,6 +132,18 @@ const router = createBrowserRouter([
     element: <Erecipt />,
   },
   {
+    path: "review",
+    element: <Review />,
+  },
+  {
+    path: "serviceconform",
+    element: <ServiceConform />,
+  },
+  {
+    path: "transactions",
+    element: <Transactions />,
+  },
+  {
     path: "/active-service-details",
     element: <ActiveServiceDetails />,
   },
@@ -138,8 +160,16 @@ const router = createBrowserRouter([
     element: <Reviewsdetails />,
   },
   {
+    path: "/profile",
+    element: <Profile />,
+  },
+  {
     path: "/complaint-form",
     element: <ComplaintForm />,
+  },
+  {
+    path: "/about",
+    element: <AboutUs />,
   },
   {
     path: "active-services",
@@ -148,6 +178,26 @@ const router = createBrowserRouter([
   {
     path: "complaints-list",
     element: <ComplaintsList />,
+  },
+  {
+    path: "notification-settings",
+    element: <NotificationSettings />,
+  },
+  {
+    path: "/notifications",
+    element: <NotificationList />,
+  },
+  {
+    path: "/editprofile",
+    element: <Editprofile />,
+  },
+  {
+    path: "/security",
+    element: <Security />,
+  },
+  {
+    path: "/inbox-chat",
+    element: <InboxChat />,
   },
   {
     path: "help-center",
