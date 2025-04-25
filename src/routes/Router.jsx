@@ -28,6 +28,7 @@ import Reviewsdetails from "../pages/reviews";
 import ComplaintForm from "../pages/ComplaintForm";
 import ActiceServices from "../pages/ActiceServices";
 import ComplaintsList from "../pages/ComplaintsList";
+import HelpCenter from "../pages/HelpCenter";
 
 const router = createBrowserRouter([
   {
@@ -148,7 +149,11 @@ const router = createBrowserRouter([
   {
     path: "complaints-list",
     element: <ComplaintsList/>
-  }
+  },
+  {
+    path: "help-center",
+    element: <HelpCenter/>
+  },
 ]);
 
 export default function Router() {
