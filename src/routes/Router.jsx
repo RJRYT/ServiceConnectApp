@@ -197,6 +197,11 @@ const router = createBrowserRouter([
     element: <ChatsMesseges/>
   },
   {
+
+    path: "/chat-messeges",
+    element: <ChatsMesseges/>
+  },
+  {
     path: "/security",
     element: <Security />,
   },
