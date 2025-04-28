@@ -34,6 +34,7 @@ import ComplaintsList from "../pages/ComplaintsList";
 import NotificationSettings from "../pages/NotificationSettings";
 import NotificationList from "./../pages/NotificationList";
 import Editprofile from "../pages/Editprofile";
+import ChatsMesseges from "../pages/ChatsMesseges";
 
 const router = createBrowserRouter([
   {
@@ -176,6 +177,10 @@ const router = createBrowserRouter([
   {
     path: "/editprofile",
     element: <Editprofile />,
+  },
+  {
+    path: "/chat-messeges",
+    element: <ChatsMesseges/>
   }
 ]);
 
