@@ -13,7 +13,7 @@ function ChatsMessages() {
       <div className="flex justify-between items-center bg-gray-100 sticky top-0 z-10 p-3">
         <div className="flex items-center">
           <IoIosArrowRoundBack className="text-6xl" />
-          <h1 className="text-lg font-semibold ml-2">Virginia M. Patterson</h1>
+          <h1 className="text-lg font-semibold ml-2">Virginia M Patterson</h1>
         </div>
         <div className="flex items-center gap-3 pr-4">
           <FiPhone className="text-2xl" />
